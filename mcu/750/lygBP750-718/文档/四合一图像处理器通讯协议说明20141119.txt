@@ -1,0 +1,223 @@
+命令1
+BOARD ADV7604_PROGRAM_EDID [SlotIndex] [EDID_Mode]
+此命令用于烧写DVI输入板的EDID信息, SlotIndex是插槽号，EDID_Mode:0--1080P，1--1600x1200， 2--1920x1200, 3--1280x1024
+示例：
+	BOARD ADV7604_PROGRAM_EDID 0xFF 0
+	此示例命令将检测到的所有DVI输入芯片的EDID重新烧写一遍
+
+命令2
+BOARD ADV7604_SELECT_INPUT_PORT [SlotIndex] [InputPortIndex]
+此命令用于切换 DVI/VGA/HDMI 输入[SlotIndex]的通道，InputPortIndex：0--YPbPr、1--VGA、2--HDMI,
+SlotIndex
+示例：
+	BOARD ADV7604_SELECT_INPUT_PORT 0 2
+
+命令3 读取处理板输入输出信息
+BOARD RMG
+此命令用于读取当前信号处理板输入信号的数量和输出信号的数量
+示例：
+	BOARD RMG
+	返回
+	BOARD READ_MESSAGE: DVI_IN 0x02 SDI_IN 0x02 HDMI_OUT 0x01
+
+命令4 读取输入板当前信号的分辨率
+BOARD RISR [SlotIndex] [SignalIndex]
+此命令用于读取输入插槽当前信号的分辨率
+示例：
+	BOARD RISR 1 0
+	此示例命令将读取插槽1的输入板信号0的分辨率
+	返回
+	BOARD READ_INPUT_SOURCE_RESOLUTION [SlotIndex] [SignalIndex] [XStart] [YStart] [Width] [Height]
+	BOARD READ_INPUT_SOURCE_RESOLUTION 1 0 0 0 1920 1080
+
+命令5读取插槽所插入的信号板的类型
+BOARD RSMG [SlotIndex]
+此命令用于读取插槽中信号板的类型。
+返回命令
+BOARD READ_SLOT_MESSAGE [SlotIndex] [SlotBoardType]
+[SlotIndex]插槽号
+[SlotBoardType]信号板类型, 0--Video输入板、1--VGA/HDMI/YPbPr输入板、2--SDI输入板、3--DVI输出板、6--四合一Video输入板、7--未知信号板或没有信号板
+示例：
+	BOARD READ_SLOT_MESSAGE 1
+	返回
+	BOARD READ_SLOT_MESSAGE 1 2
+	
+	BOARD READ_SLOT_MESSAGE 0x0F
+	返回当前所有插槽的信息
+	BOARD READ_SLOT_MESSAGE 0 1
+	BOARD READ_SLOT_MESSAGE 1 1
+	BOARD READ_SLOT_MESSAGE 2 1
+	BOARD READ_SLOT_MESSAGE 3 2
+	BOARD READ_SLOT_MESSAGE 4 3
+
+
+命令6设置输出分辨率
+BOARD SET_OUTPUT_TIMING [TimingIndex]
+此命令用于设置输出分辨率，TimingIndex：0--1024 x 768@60, 1--800 x 600@60，2--1280 x 720@60，3--1920 x 1080@60，4--1366x768@60，5--1400x1050，6--1600 x 1200，7--1920 x 1200
+BOARD SET_OUTPUT_TIMING 3
+
+命令7清除处理板缩放器的配置参数
+INPUT_FPGA CLEAR_SCALER_USE [BoardIndex]
+此命令用于清除处理板缩放器的配置参数，BoardIndex--处理板索引号
+INPUT_FPGA CLEAR_SCALER_USE 0
+
+命令8配置处理器板上的缩放器
+INPUT_FPGA SCALER_SETUP [BoardIndex] [ScalerIndex] [SourceIndex] [InHoriSize] [InVertSize] [InFirstPixel] [InLastPixel] [InFirstLine] [InLastLine] [OutHoriSize] [OutVertSize]
+BoardIndex--处理板索引号
+ScalerIndex--缩放器索引号
+SourceIndex--信号源索引号
+InHoriSize，InVertSize输入信号的长和宽
+[InFirstPixel] [InLastPixel] [InFirstLine] [InLastLine]缩放器截取输入信号的位置
+[OutHoriSize] [OutVertSize]缩放器输出的图像长和宽
+示例：
+	INPUT_FPGA SCALER_SETUP 0 0 0 1920 1080 0 1919 0 1079 960 540
+	此示例命令将处理板0，使用缩放器0，截取输出插槽0的信号板的输入信号进行缩放，输入信号源的大小是1920x1080，截取位置是全屏截取，缩放输出为960x540的图像。
+	注意InLastPixel是图像截取宽度减1，InLastLine是图像截取高度减1
+
+命令组9处理板背景通道窗口布局
+处理板背景通道窗口布局由三种子命令组成实现对处理板背景通道开窗口分别是SET_WINDOWS_LAYOUT设置窗口布局、ADD_WINDOWS添加窗口和ADD_WINDOWS_END添加窗口结束，具体格式如下
+INPUT_FPGA SET_WINDOWS_LAYOUT [BoardIndex] [BackgroundIndex] [ScreenWidth] [ScreenHeight]
+INPUT_FPGA ADD_WINDOWS [SourceIndex] [Layer] [InLeft] [InTop] [InRight] [InBottom] [DisplayLeft] [DisplayTop] [DisplayRight] [DisplayBottom]
+INPUT_FPGA ADD_WINDOWS_END
+反复使用ADD_WINDOWS添加多个窗口
+BoardIndex: 处理板卡索引号，取值0-3
+BackgroundIndex：背景索引号，取值0-3
+ScreenWidth，ScreenHeight背景输出的图像分辨率长度和高度
+SourceIndex：信号源在板卡中的索引号，取值0-7，其中0-3是信号输入板直接输入的信号源，4-7是经过缩放器缩放后的信号源
+Layer：窗口所在层或窗口优先级，值越大优先级越高，取值1-N
+InLeft，InTop，InRight，InBottom：表示显示窗口需要截取的信号源图像的位置。
+DisplayLeft，DisplayTop，DisplayRight，DisplayBottom：表示显示窗口的位置。
+
+命令组10处理板背景通道窗口清除
+处理板背景通道窗口清除由一种子命令组成实现将处理板背景通道上开的所有小窗口全部清除，在对当前背景通道进行窗口布局时使用本命令先清除上一次的窗口布局。
+INPUT_FPGA CLEAR_OUTPUT_WINDOW [BoardIndex] [BackgroundIndex]
+BoardIndex: 处理板卡索引号，取值0-3
+BackgroundIndex：背景索引号，取值0-3
+
+命令组11设置按键显示效果
+本设备有20个按键，每个按键可根据用户需求自定义20个显示效果。
+INPUT_FPGA SET_KEY_MODE [KeyIndex]
+命令8
+命令组9
+INPUT_FPGA SET_KEY_MODE 0
+
+KeyIndex：按键序号，取值1-20
+命令8、命令组9即客户自定义的显示效果。
+INPUT_FPGA SET_KEY_MODE 0 表示命令组结束。
+
+命令12 设置输出时钟
+BOARD SET_OUTPUT_CLK [AUDIO_CLK] [VIDEO_CLK]
+此命令用于设置输出时钟的频率
+示例：
+	BOARD SET_OUTPUT_CLK 10 6
+	此示例命令将设置输出时钟，AUDIO_CLK = 49.1520MHz， VIDEO_CLK = 148.50MHz
+	返回
+	BOARD SET_OUTPUT_CLK 10 6
+
+命令13 设置自定义输出分辨率
+BOARD SET_CUSTOM_RESOLUTION [VideoModeIndex] [TotalPixel] [TotalLine] [HStart] [VStart] [ActivePixel] [ActiveLine]
+VideoModeIndex: 视频模式
+TotalPixel：一行总点数
+TotalLine：一帧图像总行数
+HStart:横向起始偏移
+VStart：纵向起始偏移
+ActivePixel：一行有效点数
+ActiveLine：一帧有效行数
+示例：
+	BOARD SET_CUSTOM_RESOLUTION 16 4400 1125 0 0 3840 1080
+	BOARD SET_CUSTOM_RESOLUTION 16 2200 1125 0 0 1920 1080
+	
+命令14 获取输出分辨率
+BOARD GOR
+命令返回
+BOARD GET_OUTPUT_RESOLUTION [ActivePixel] [ActiveLine] [VFreq]
+ActivePixel：一行有效点数
+ActiveLine：一帧有效行数
+VFreq：刷新率
+
+命令15 设置ADV7604颜色等配置
+BOARD ADV7604_SET_CTRL [SlotIndex] [CTRL_TYPE] [Value]
+SlotIndex: ADV7604所在的插槽号
+CTRL_TYPE：调节类型，0--BRIGHTNESS，1--CONTRAST，2--SATURATION，3--HUE
+Value：取值[0~255]
+
+命令16 获取ADV7604颜色等配置
+BOARD ADV7604_GET_CTRL [SlotIndex] [CTRL_TYPE]
+SlotIndex: ADV7604所在的插槽号 0~5
+CTRL_TYPE：调节类型，0--BRIGHTNESS，1--CONTRAST，2--SATURATION，3--HUE
+Value：取值[0~255]
+示例：
+	BOARD ADV7604_GET_CTRL 0 1
+	此示例命令将读取ADV7604 0 的CONTRAST
+	返回
+	BOARD ADV7604_GET_CTRL [SlotIndex] [CTRL_TYPE] [Value]
+	BOARD ADV7604_GET_CTRL 0 1 128
+
+命令17 设置测试图的颜色
+INPUT_FPGA SET_TEST_PATTERN_COLOR [OutputPort] [IsEnable] [Color_Value]
+OutputPort: 输出端口
+IsEnable：是否显示测试图，0--不显示测试图，正常显示图像，1--显示测试图
+Color_Value：测试图的颜色， 有效位是24位，分别是RGB，每个颜色8位
+示例
+输出0显示全红色测试图
+INPUT_FPGA SET_TEST_PATTERN_COLOR 0 1 0xFF0000
+输出1显示正常图像
+INPUT_FPGA SET_TEST_PATTERN_COLOR 1 0 0x00000
+
+BOARD PARAM_RESET 1
+
+BOARD SET_OUTPUT_CLK 10 6
+BOARD SET_CUSTOM_RESOLUTION 4400 1125 3840 1080
+
+处理板总体说明
+处理板主要通过命令7、8、9和10来实现信号源开窗口
+示例
+INPUT_FPGA CLEAR_SCALER_USE 0
+INPUT_FPGA SCALER_SETUP 0 0 0 1920 1080 0 1919 0 1079 960 540
+INPUT_FPGA SCALER_SETUP 0 1 1 1920 1080 0 1919 0 1079 960 540
+INPUT_FPGA SCALER_SETUP 0 2 2 1920 1080 0 1919 0 1079 960 540
+INPUT_FPGA SCALER_SETUP 0 3 3 1920 1080 0 1919 0 1079 960 540
+
+INPUT_FPGA CLEAR_OUTPUT_WINDOW 0 0
+INPUT_FPGA SET_WINDOWS_LAYOUT 0 0 1920 1080
+INPUT_FPGA ADD_WINDOWS 4 1 0 0 960 540 0 0 960 540
+INPUT_FPGA ADD_WINDOWS 5 2 0 0 960 540 960 0 1920 540
+INPUT_FPGA ADD_WINDOWS 6 3 0 0 960 540 0 540 960 1080
+INPUT_FPGA ADD_WINDOWS 7 4 0 0 960 540 960 540 1920 1080
+INPUT_FPGA ADD_WINDOWS_END
+
+INPUT_FPGA CLEAR_SCALER_USE 0
+INPUT_FPGA SCALER_SETUP 0 0 0 720 480 0 719 0 479 1920 1080
+INPUT_FPGA CLEAR_OUTPUT_WINDOW 0 0
+INPUT_FPGA SET_WINDOWS_LAYOUT 0 0 1920 1080
+INPUT_FPGA ADD_WINDOWS 4 1 0 0 1920 1080 0 0 1920 1080
+INPUT_FPGA ADD_WINDOWS 0 2 0 0 720 480 200 200 920 680
+INPUT_FPGA ADD_WINDOWS_END
+
+INPUT_FPGA CLEAR_SCALER_USE 0
+INPUT_FPGA SCALER_SETUP 0 0 1 1920 1080 0 1919 0 1079 1600 1200
+INPUT_FPGA CLEAR_OUTPUT_WINDOW 0 0
+INPUT_FPGA SET_WINDOWS_LAYOUT 0 0 1600 1200
+INPUT_FPGA ADD_WINDOWS 4 1 0 0 1600 1200 0 0 1600 1200
+INPUT_FPGA ADD_WINDOWS_END
+
+INPUT_FPGA CLEAR_SCALER_USE 0
+INPUT_FPGA SCALER_SETUP 0 0 1 1920 1080 0 1919 0 1079 1920 1200
+INPUT_FPGA CLEAR_OUTPUT_WINDOW 0 0
+INPUT_FPGA SET_WINDOWS_LAYOUT 0 0 1920 1200
+INPUT_FPGA ADD_WINDOWS 4 1 0 0 1920 1200 0 0 1920 1200
+INPUT_FPGA ADD_WINDOWS_END
+
+
+INPUT_FPGA READ 0x1430
+INPUT_FPGA WRITE 0x1430 0x23D42372
+INPUT_FPGA WRITE 0x1434 0x01
+
+INPUT_FPGA WRITE 0x1431 0xD4237223
+INPUT_FPGA WRITE 0x1434 0x02
+
+INPUT_FPGA WRITE 0x1432 0xD4237223
+INPUT_FPGA WRITE 0x1434 0x04
+
+INPUT_FPGA WRITE 0x1433 0xD4237223
+INPUT_FPGA WRITE 0x1434 0x08

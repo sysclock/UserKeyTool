@@ -1,0 +1,316 @@
+---- g_CurrentState 匹配 (374 in 9 文件) ----
+I2C.c:	if(g_CurrentState==State_UserPara_Number)
+Keypad.c:	//g_CurrentState=
+Keypad.c:	switch(g_CurrentState)
+Keypad.c:	switch(g_CurrentState)
+Keypad.c:	switch(g_CurrentState)
+Keypad.c:	g_CurrentState=State_MainMenu_Menu;
+Keypad.c:	g_CurrentState=State_MainMenu_Not_Menu;
+Keypad.c:	if(g_CurrentState!=State_NewMode_Set)
+Keypad.c:		g_CurrentState=State_MainMenu_Not_Menu;
+Keypad.c:		g_CurrentState=State_MainMenu_Not_Menu;
+Keypad.c:	g_CurrentState=CurState;
+Keypad.c:		if(stateData[g_CurrentState].string1th!=NULL)
+Keypad.c:			chinesedisplay(stateData[g_CurrentState].startaddr1th, stateData[g_CurrentState].string1th);
+Keypad.c:		if(stateData[g_CurrentState].string2th!=NULL)
+Keypad.c:			chinesedisplay(stateData[g_CurrentState].startaddr2th, stateData[g_CurrentState].string2th);
+Keypad.c:		if(stateData[g_CurrentState].string1thEn!=NULL)
+Keypad.c:			chinesedisplay(stateData[g_CurrentState].startaddr1th, stateData[g_CurrentState].string1thEn);
+Keypad.c:		if(stateData[g_CurrentState].string2thEn!=NULL)
+Keypad.c:			chinesedisplay(stateData[g_CurrentState].startaddr2th, stateData[g_CurrentState].string2thEn);
+Keypad.c:	if(g_CurrentState==State_UserTry_Once_Password101)
+Keypad.c:	else if(g_CurrentState==State_UserTry_Once_Password102)
+Keypad.c:	else if(g_CurrentState==State_UserTry_Once_Password103)
+Keypad.c:	else if(g_CurrentState==State_UserTry_Once_Password104)
+Keypad.c:	else if(g_CurrentState==State_UserTry_Once_Password105)
+Keypad.c:	//else if(g_CurrentState==State_UserTry_Once_Password100 ||g_CurrentState==State_UserTry_Once_Password100_new ||g_CurrentState==State_UserTry_Once_Password100_new1)
+Keypad.c:	 if(g_CurrentState==State_UserTry_Once_Password100_new ||g_CurrentState==State_UserTry_Once_Password100_new1)	
+Keypad.c:	else if(g_CurrentState== State_UserTry_OnceTel)
+Keypad.c:	if(g_CurrentState==State_Fade_Switch_Mode)  //淡入淡出
+Keypad.c:	else if(g_CurrentState==State_Fuse_Switch_Mode)//融合模式
+Keypad.c:	switch(g_CurrentState)
+Keypad.c:			g_CurrentState=stateData[g_CurrentState].navigationData[NAV_DOWN];
+Keypad.c:			g_CurrentState=State_ScalerPara_Size;
+Keypad.c:	DealCurrentState(g_CurrentState);	
+Keypad.c:	g_CurrentState=State_MultiWindow_PIP;
+Keypad.c:	g_CurrentState=State_Lock_Key;
+Keypad.c:	g_CurrentState=State_Lock_Key;
+Keypad.c:	switch(g_CurrentState)
+Keypad.c:		//g_CurrentState=State_MainMenu_Menu;
+Keypad.c:	g_CurrentState=State_MainMenu_Menu;
+Keypad.c:					g_CurrentState=State_MainMenu_Not_Menu;
+Keypad.c:			switch(g_CurrentState)
+Keypad.c:			if(KeyACC>=10&&(keyPress==UP_KEY||keyPress==DOWN_KEY)&&(IsSetParaValueState()||IsSetColorParaValueState()||g_CurrentState==State_Volume_Set))
+Keypad.c:				if(g_CurrentState!=State_UserTry_OnceEnd && g_CurrentState!=State_UserTry_Once_ID_Time)
+Keypad.c:						if(g_CurrentState!=State_UserTry_OnceEnd && g_CurrentState!=State_UserTry_Once_ID_Time)
+Keypad.c:					if(!g_WizadFlag&&g_CurrentState!=State_User_Input_Try7Days&&KeyACC==0)   
+Keypad.c:			else if(g_CurrentState==State_NewMode_Set)
+Keypad.c:					switch(g_CurrentState)
+Keypad.c:			if(g_CurrentState!=State_UserTry_OnceEnd && g_CurrentState!=State_UserTry_Once_ID_Time)
+Keypad.c:			g_CurrentState=State_Lock_Key;
+Keypad.c: 	switch(g_CurrentState)
+Keypad.c: 	return g_CurrentState;
+Keypad.h:_KEYPADDEC_ State g_CurrentState; 
+Main.c://	g_CurrentState=State_MainMenu_Menu;
+Main.c:		if(g_UserTry_once_EndFlag==__TRUE && (g_CurrentState!=State_UserTry_OnceEnd)&&(g_CurrentState!=State_UserTry_Once_ID_Time)) //如果授权已经结束，清除大屏显示，进行到输入密码页
+Main.c:			g_CurrentState=State_UserTry_OnceEnd;
+Main.c:					g_CurrentState=State_MainMenu_Not_Menu;
+Main.c:					g_CurrentState=State_MainMenu_Menu;
+Main.c:		g_CurrentState=State_MainMenu_Menu;
+Main.c:		g_CurrentState=State_MainMenu_Menu;
+Main.c:				g_CurrentState=State_MainMenu_Not_Menu;
+Main.c:		if(g_CurrentState==State_NewMode_Set)
+MenuTbl.c:	g_CurrentState=State_NewMode_Set;
+MenuTbl.c:	switch(g_CurrentState)
+MenuTbl.c:	g_CurrentState=State_MainMenu_Not_Menu;
+MenuTbl.c:			g_CurrentState=State_FullOrPart_Part;
+MenuTbl.c:			g_CurrentState=State_FullOrPart_Full;
+MenuTbl.c:				//g_CurrentState=State_FullOrPart_Part;
+MenuTbl.c:	g_CurrentState=State_MainMenu_Not_Menu;
+MenuTbl.c:		g_CurrentState=State_FullOrPart_Part;
+MenuTbl.c:		g_CurrentState=State_FullOrPart_Full;
+MenuTbl.c:	g_CurrentState=State_MainMenu_Not_Menu;
+MenuTbl.c:			g_CurrentState=State_FullOrPart_Part;
+MenuTbl.c:			g_CurrentState=State_FullOrPart_Full;
+MenuTbl.c:				//g_CurrentState=State_FullOrPart_Part;
+MenuTbl.c:				//g_CurrentState=State_FullOrPart_Full;
+MenuTbl.c:	g_CurrentState=State_MainMenu_Not_Menu;
+MenuTbl.c:			g_CurrentState=State_FullOrPart_Part;			
+MenuTbl.c:			g_CurrentState=State_FullOrPart_Full;			
+MenuTbl.c:	g_CurrentState=State_MainMenu_Not_Menu;
+MenuTbl.c:			g_CurrentState=State_FullOrPart_Part;
+MenuTbl.c:			g_CurrentState=State_FullOrPart_Full;
+MenuTbl.c:	switch(g_CurrentState)
+MenuTbl.c:			g_CurrentState=stateData[g_CurrentState].navigationData[NAV_DOWN];
+MenuTbl.c:			g_CurrentState=State_MultiWindow_Single;
+MenuTbl.c:	DealCurrentState(g_CurrentState);
+MenuTbl.c:	if(g_CurrentState==stateData[g_CurrentState].GetCurrentStateValue())
+MenuTbl.c:		switch(g_CurrentState)
+MenuTbl.c:		g_CurrentState=State_MainMenu_Not_Menu;
+MenuTbl.c:		switch(g_CurrentState)
+MenuTbl.c:				wValue=stateData[g_CurrentState].GetWindowSize();
+MenuTbl.c:				g_CurrentState=State_MainMenu_Not_Menu;			
+MenuTbl.c:					g_CurrentState=State_ActiveImage_Main;
+MenuTbl.c:					g_CurrentState=State_ActiveImage_Sub;
+MenuTbl.c:	switch(g_CurrentState)
+MenuTbl.c:			g_CurrentState=stateData[g_CurrentState].navigationData[NAV_DOWN];
+MenuTbl.c:			if((stateData[g_CurrentState].startaddr2th==LCDADDR91)&&(stateData[g_CurrentState].GetCurrentStateValue!=NULL))
+MenuTbl.c:				if(g_CurrentState==stateData[g_CurrentState].GetCurrentStateValue())
+MenuTbl.c:			g_CurrentState=State_MainMenu_Menu_ScreenPara;
+MenuTbl.c:	DealCurrentState(g_CurrentState);	
+MenuTbl.c:	switch(g_CurrentState)
+MenuTbl.c:	if((g_CurrentState==State_SavePara_Number)||(g_CurrentState==State_UserPara_Number))
+MenuTbl.c:	if(stateData[g_CurrentState].string2th!=NULL||g_CurrentState==State_OutputHz_NumHz) // 擦除上一页的信息
+MenuTbl.c:		if(g_CurrentState!=stateData[g_CurrentState].navigationData[NAV_UP])
+MenuTbl.c:			g_CurrentState=stateData[g_CurrentState].navigationData[NAV_UP];
+MenuTbl.c:		DealCurrentState(g_CurrentState);
+MenuTbl.c:		if(stateData[g_CurrentState].ExecFunction!=NULL&&IsExecuteFunc==0)
+MenuTbl.c:			if(stateData[g_CurrentState].ExecFunction(KEY_UP,g_CurrentState,0))
+MenuTbl.c:		if((stateData[g_CurrentState].startaddr2th==LCDADDR91)&&(stateData[g_CurrentState].GetCurrentStateValue!=NULL))
+MenuTbl.c:			if(g_CurrentState==stateData[g_CurrentState].GetCurrentStateValue())
+MenuTbl.c:		if(g_CurrentState==State_Fuse_Switch_Value)
+MenuTbl.c:		if(g_CurrentState!=stateData[g_CurrentState].navigationData[NAV_DOWN])
+MenuTbl.c:			g_CurrentState=stateData[g_CurrentState].navigationData[NAV_DOWN];
+MenuTbl.c:		if(stateData[g_CurrentState].string2th!=NULL)
+MenuTbl.c:			DealCurrentState(g_CurrentState);
+MenuTbl.c:		if(stateData[g_CurrentState].GetWindowSize!=NULL)
+MenuTbl.c:			wValue=stateData[g_CurrentState].GetWindowSize();	
+MenuTbl.c:		switch(g_CurrentState)
+MenuTbl.c:					printf("MenuTbl.c Line1728,State_ZoomPara_Size_Valueis g_CurrentState,its number: %d \r\n",g_CurrentState);
+MenuTbl.c:		if(stateData[g_CurrentState].ExecFunction!=NULL)
+MenuTbl.c:			stateData[g_CurrentState].ExecFunction(KEY_UP,g_CurrentState,wValue);
+MenuTbl.c:		switch(g_CurrentState)
+MenuTbl.c:	if((g_CurrentState==State_SavePara_Number)||(g_CurrentState==State_UserPara_Number))
+MenuTbl.c:	if(stateData[g_CurrentState].string2th!=NULL||g_CurrentState==State_OutputHz_NumHz)  // 擦除上一页的信息
+MenuTbl.c:		if(g_CurrentState!=stateData[g_CurrentState].navigationData[NAV_DOWN])
+MenuTbl.c:			g_CurrentState=stateData[g_CurrentState].navigationData[NAV_DOWN];
+MenuTbl.c:		DealCurrentState(g_CurrentState);
+MenuTbl.c:		if(stateData[g_CurrentState].ExecFunction!=NULL&&IsExecuteFunc==0)
+MenuTbl.c:			if(stateData[g_CurrentState].ExecFunction(KEY_DOWN,g_CurrentState,0))
+MenuTbl.c:		if((stateData[g_CurrentState].startaddr2th==LCDADDR91)&&(stateData[g_CurrentState].GetCurrentStateValue!=NULL))
+MenuTbl.c:			if(g_CurrentState==stateData[g_CurrentState].GetCurrentStateValue())
+MenuTbl.c:		if(g_CurrentState==State_Fuse_Switch_Value)
+MenuTbl.c:		if(g_CurrentState!=stateData[g_CurrentState].navigationData[NAV_UP])
+MenuTbl.c:			g_CurrentState=stateData[g_CurrentState].navigationData[NAV_UP];
+MenuTbl.c:		if(stateData[g_CurrentState].GetWindowSize!=NULL)
+MenuTbl.c:			wValue=stateData[g_CurrentState].GetWindowSize();
+MenuTbl.c:		switch(g_CurrentState)
+MenuTbl.c:		if(stateData[g_CurrentState].ExecFunction!=NULL)
+MenuTbl.c:			stateData[g_CurrentState].ExecFunction(KEY_DOWN,g_CurrentState,wValue);
+MenuTbl.c:		switch(g_CurrentState)
+MenuTbl.c:			g_CurrentState=State_OutputFormat_640x480;
+MenuTbl.c:			g_CurrentState=State_OutputFormat_800x600;
+MenuTbl.c:			g_CurrentState=State_OutputFormat_1024x768x60;
+MenuTbl.c:				g_CurrentState=State_OutputFormat_1280x1024;
+MenuTbl.c:				g_CurrentState=State_OutputFormat_1280x720;
+MenuTbl.c:			g_CurrentState=State_OutputFormat_1366x768;
+MenuTbl.c:			g_CurrentState=State_OutputFormat_1440x900;
+MenuTbl.c:			g_CurrentState=State_OutputFormat_1600x1200;
+MenuTbl.c:			g_CurrentState=State_OutputFormat_1680x1050;
+MenuTbl.c:				g_CurrentState=State_OutputFormat_1920x1080;
+MenuTbl.c:				g_CurrentState=State_OutputFormat_1920x1200;
+MenuTbl.c:			g_CurrentState=State_OutputFormat_2048x1152;
+MenuTbl.c:			g_CurrentState=State_OutputFormat_UserPrefer;
+MenuTbl.c:		g_CurrentState=State_OutputFormat_2560x960;
+MenuTbl.c:		g_CurrentState=State_OutputFormat_3840x600;
+MenuTbl.c:	return g_CurrentState;
+MenuTbl.c:	State g_PreState=g_CurrentState;
+MenuTbl.c:	switch(g_CurrentState)
+MenuTbl.c:			g_CurrentState=State_InputCycle_Set;
+MenuTbl.c:			SetTimeSchedule(KEY_ENTER,g_CurrentState,0);
+MenuTbl.c:			g_CurrentState=State_MainMenu_Menu;
+MenuTbl.c:			g_CurrentState=State_MainMenu_Menu;
+MenuTbl.c:			g_CurrentState=State_MainMenu_Menu;
+MenuTbl.c:		g_CurrentState=State_Input_HOUR;
+MenuTbl.c:	switch(g_CurrentState)
+MenuTbl.c:			if(stateData[g_CurrentState].ExecFunction!=NULL)
+MenuTbl.c:				if(!stateData[g_CurrentState].ExecFunction(KEY_ENTER,g_CurrentState,0)) //OK-key, Current-State,0
+MenuTbl.c:					g_CurrentState= State_UserTry_Once_SetEnd;
+MenuTbl.c:			if(stateData[g_CurrentState].ExecFunction!=NULL)
+MenuTbl.c:				if(!stateData[g_CurrentState].ExecFunction(KEY_ENTER,g_CurrentState,0)) //OK-key, Current-State,0
+MenuTbl.c:			if(stateData[g_CurrentState].ExecFunction!=NULL)
+MenuTbl.c:				if(!stateData[g_CurrentState].ExecFunction(KEY_ENTER,g_CurrentState,0)) //OK-key, Current-State,0
+MenuTbl.c:					DealCurrentState(g_CurrentState);
+MenuTbl.c:			if(stateData[g_CurrentState].ExecFunction!=NULL)
+MenuTbl.c:				if(!stateData[g_CurrentState].ExecFunction(KEY_ENTER,g_CurrentState,0))
+MenuTbl.c:	if(g_CurrentState==State_AdvancePara_OutputFormat)  
+MenuTbl.c:		g_CurrentState=GetCurrentOuputResolution();		
+MenuTbl.c:	else if(g_CurrentState!=stateData[g_CurrentState].navigationData[NAV_OK])
+MenuTbl.c:		g_CurrentState=stateData[g_CurrentState].navigationData[NAV_OK];
+MenuTbl.c:	if(g_CurrentState==State_MainMenu_Menu)
+MenuTbl.c:	DealCurrentState(g_CurrentState);
+MenuTbl.c:	if(stateData[g_CurrentState].string2th!=NULL)
+MenuTbl.c:		switch(g_CurrentState)	  
+MenuTbl.c:		if((stateData[g_CurrentState].ExecFunction!=NULL)&&(IsExecuteFunc==0||g_CurrentState==State_TimeSchedule_Begin_Input1
+MenuTbl.c:			||g_CurrentState==State_TimeSchedule_Begin_Input2||g_CurrentState==State_TimeSchedule_Begin_Input3))
+MenuTbl.c:			if(stateData[g_CurrentState].ExecFunction(KEY_ENTER,g_CurrentState,0))
+MenuTbl.c:		if((stateData[g_CurrentState].startaddr2th==LCDADDR91)&&(stateData[g_CurrentState].GetCurrentStateValue!=NULL))
+MenuTbl.c:			if(g_CurrentState==stateData[g_CurrentState].GetCurrentStateValue())
+MenuTbl.c:		if(stateData[g_CurrentState].GetWindowSize!=NULL)
+MenuTbl.c:			wValue=stateData[g_CurrentState].GetWindowSize();
+MenuTbl.c:		switch(g_CurrentState)
+MenuTbl.c:				NumKeySetValue(KEY_UP,g_CurrentState);
+MenuTbl.c:				if(!NumKeySetValue(KEY_UP,g_CurrentState))
+MenuTbl.c:					if(stateData[g_CurrentState].ExecFunction!=NULL)
+MenuTbl.c:						stateData[g_CurrentState].ExecFunction(KEY_ENTER,g_CurrentState,0);
+MenuTbl.c:					SetCurrentStateValue(KEY_ENTER,g_CurrentState, 0);
+MenuTbl.c:				if(g_PreState!=g_CurrentState)
+MenuTbl.c:					if(NumKeySetValue(KEY_UP,g_CurrentState)==__TRUE)
+MenuTbl.c:					if(NumKeySetValue(KEY_UP,g_CurrentState)==__TRUE)
+MenuTbl.c:					if(NumKeySetValue(KEY_UP,g_CurrentState)==TRUE)
+MenuTbl.c:					if(NumKeySetValue(KEY_UP,g_CurrentState)==TRUE)
+MenuTbl.c:	if(g_CurrentState==State_MainMenu_Menu)
+MenuTbl.c:	if(g_CurrentState==State_HotBackup_Check||g_CurrentState==State_User_HotBackup_Continue)
+MenuTbl.c:	g_CurrentState=stateData[g_CurrentState].navigationData[NAV_ESC];
+MenuTbl.c:		chinesedisplay(stateData[g_CurrentState].startaddr1th, stateData[g_CurrentState].string1th);		
+MenuTbl.c:		chinesedisplay(stateData[g_CurrentState].startaddr2th, stateData[g_CurrentState].string2th);
+MenuTbl.c:		chinesedisplay(stateData[g_CurrentState].startaddr1th, stateData[g_CurrentState].string1thEn);		
+MenuTbl.c:		chinesedisplay(stateData[g_CurrentState].startaddr2th, stateData[g_CurrentState].string2thEn);
+MenuTbl.c:	g_CurrentState=State_Volume_Set;
+MenuTbl.c:	if(stateData[g_CurrentState].GetWindowSize!=NULL)
+MenuTbl.c:		wValue=stateData[g_CurrentState].GetWindowSize();	
+MenuTbl.c:		chinesedisplay(stateData[g_CurrentState].startaddr1th, stateData[g_CurrentState].string1th);
+MenuTbl.c:		chinesedisplay(stateData[g_CurrentState].startaddr1th, stateData[g_CurrentState].string1thEn);
+MenuTbl.c:	g_CurrentState=State_Volume_Set;
+MenuTbl.c:		if(stateData[g_CurrentState].GetWindowSize!=NULL)
+MenuTbl.c:		wValue=stateData[g_CurrentState].GetWindowSize();	
+MenuTbl.c:		g_CurrentState=State_FreezeImage_Check;
+MenuTbl.c:	if(IsSetParaValueState()||IsSetColorParaValueState()||g_CurrentState==State_Fuse_Switch_Value||g_CurrentState==State_Volume_Set)
+MenuTbl.c:		if(g_CurrentState!=State_NewMode_Set)
+MenuTbl.c:			g_CurrentState=State_MainMenu_Not_Menu;
+MenuTbl.c:	g_CurrentState=State_UserPara_Number;
+MenuTbl.c:	g_CurrentState=State_SavePara_Number;	
+MenuTbl.c:		switch(g_CurrentState)
+RTC.c:	g_CurrentState=State_MainMenu_Not_Menu;
+RTC.c:	if(g_CurrentState==State_MainMenu_Menu_StartInfo)
+RTC.c:	if(g_CurrentState==State_MainMenu_Menu_StartInfo)
+RTC.c:	if(g_CurrentState==State_MainMenu_Menu&&g_RTCErrorFlag==0)
+StateData.c:	if(g_CurrentState==State_SavePara_Number)
+StateData.c:	else if(g_CurrentState==State_UserPara_Number)
+StateData.c:	switch(g_CurrentState)
+StateData.c:			NumKeySetValue(Val,g_CurrentState);
+StateData.c:			NumKeySetMonth(Val,g_CurrentState);
+StateData.c:			NumKeySetDate(Val,g_CurrentState);
+StateData.c:			NumKeySetHour(Val,g_CurrentState);
+StateData.c:			NumKeySetMin(Val,g_CurrentState);
+StateData.c:			NumKeySetSecond(Val,g_CurrentState);
+StateData.c:					Copy_ID_To_Name(g_Pack_ID,g_CurrentState);
+StateData.c:				Copy_ID_To_Name(g_Test_ID,g_CurrentState);
+StateData.c:				Copy_ID_To_Name(g_Sale_ID,g_CurrentState);
+StateData.c:						g_CurrentState=State_Input_YEAR;
+StateData.c:			NumKeySetValue(Val,g_CurrentState);		
+StateData.c:	switch(g_CurrentState)
+StateData.c:	if(g_CurrentState==State_ScheduleInput1_InputWeek&&(g_InputWeek1Idx<7))
+StateData.c:	else if(g_CurrentState==State_ScheduleInput2_InputWeek&&(g_InputWeek2Idx<7))
+StateData.c:	else if(g_CurrentState==State_ScheduleInput3_InputWeek&&(g_InputWeek3Idx<7))
+StateData.c:		if(g_CurrentState==State_User_Input_SerialNumber
+StateData.c:			||g_CurrentState==State_UserPara_SetStaticIP_Value)
+StateData.c:	if(g_CurrentState==State_Volume_Set&&value>100)
+StateData.c:	else if((g_CurrentState==State_ScreenPara_Size_Value
+StateData.c:		||g_CurrentState==State_ScalerPara_Size_Value
+StateData.c:		||g_CurrentState==State_DualImage_Set_MainSize
+StateData.c:		||g_CurrentState==State_DualImage_Set_SubSize
+StateData.c:	else if(g_CurrentState==State_UserPara_SetStaticIP_Value&&value>255)
+StateData.c:			 g_CurrentState=State_ScheduleInput1_Once;
+StateData.c:			 g_CurrentState=State_ScheduleInput2_Once;
+StateData.c:			 g_CurrentState=State_ScheduleInput3_Once;
+StateData.c:		chinesedisplay(0x80, stateData[g_CurrentState].string1th);  
+StateData.c:		chinesedisplay(0x91, stateData[g_CurrentState].string2th);		
+StateData.c:				g_CurrentState=State_MainMenu_Menu;
+StateData.c://	g_CurrentState=State_Input_SEC;
+StateData.c:	g_CurrentState=State_Input_YEAR;
+StateData.c:	switch(g_CurrentState)
+StateData.c:					g_CurrentState=State_Input_MIN;
+StateData.c:					g_CurrentState=State_Input_MIN;
+StateData.c:					g_CurrentState=State_Input_MIN;
+StateData.c:					g_CurrentState=State_Input_YEAR;
+StateData.c:			g_CurrentState=State_MainMenu_Menu;
+StateData.c:			if(g_CurrentState==State_UserTry_Once_Password101)
+StateData.c:			else if(g_CurrentState==State_UserTry_Once_Password102)
+StateData.c:			else if(g_CurrentState==State_UserTry_Once_Password104)
+StateData.c:			else if(g_CurrentState==State_UserTry_Once_Password105)
+StateData.c:				g_CurrentState=State_DebugMode_Start;
+StateData.c:	switch(g_CurrentState)
+StateData.c:	if(g_CurrentState==State_Input_MONTH)
+StateData.c:			g_CurrentState=State_Input_YEAR;
+StateData.c:	else if(g_CurrentState==State_Input_DOM)
+StateData.c:			g_CurrentState=State_Input_MONTH;
+StateData.c:	else if(g_CurrentState==State_Input_HOUR)
+StateData.c:				g_CurrentState=State_Input_DOM;
+StateData.c:					g_CurrentState=State_TimeSchedule_Begin_Input1;
+StateData.c:					g_CurrentState=State_TimeSchedule_Begin_Input2;
+StateData.c:					g_CurrentState=State_TimeSchedule_Begin_Input3;
+StateData.c:	else if(g_CurrentState==State_Input_MIN)
+StateData.c:			g_CurrentState=State_Input_HOUR;
+StateData.c:	else if(g_CurrentState==State_Input_SEC)
+StateData.c:			g_CurrentState=State_Input_MIN;
+StateData.c:	if(g_CurrentState==State_ScheduleInput1_InputWeek)
+StateData.c:	else if(g_CurrentState==State_ScheduleInput2_InputWeek)
+StateData.c:	else if(g_CurrentState==State_ScheduleInput3_InputWeek)
+StateMachine.c:		g_CurrentState=State_MainMenu_Menu;
+StateMachine.c:		g_CurrentState=State_SavePara_Mode_check;    //user want to overlap 
+StateMachine.c:		//g_CurrentState=State_MainMenu_Menu;
+StateMachine.c:		//g_CurrentState=State_MainMenu_Menu;
+StateMachine.c:		if(stateData[g_CurrentState].GetCurrentStateValue!=NULL)
+StateMachine.c:			if(currentState==stateData[g_CurrentState].GetCurrentStateValue())
+StateMachine.c:			g_CurrentState=State_MainMenu_Menu;
+StateMachine.c:			g_CurrentState=State_MainMenu_Menu;
+StateMachine.c:			g_CurrentState=State_MainMenu_Menu;
+StateMachine.c:			g_CurrentState=State_MainMenu_Menu;
+StateMachine.c:			g_CurrentState=State_MainMenu_Menu;
+StateMachine.c:				g_CurrentState=State_Input_MONTH;
+StateMachine.c:				g_CurrentState=State_Input_DOM;
+StateMachine.c:					g_CurrentState=State_Input_HOUR;
+StateMachine.c:				g_CurrentState=State_Input_MIN;
+StateMachine.c:					g_CurrentState=State_Input_SEC;
+StateMachine.c:	switch(g_CurrentState)
+USART.c:				g_CurrentState=State_MainMenu_Not_Menu;
+USART.c:				g_CurrentState=State_MainMenu_Not_Menu;
+USART.c:		g_CurrentState=State_MainMenu_Not_Menu;
+USART.c:			if(g_CurrentState==State_NewMode_Set)
+USART.c:			if(g_CurrentState==State_NewMode_Set)
+USART.c:			if(g_CurrentState==State_NewMode_Set)
+USART.c:						g_CurrentState=State_Fade_Switch_Mode;
+USART.c:						g_CurrentState=State_Quick_Switch_Mode;
+USART.c:						g_CurrentState=State_Fuse_Switch_Mode;
+USART.c:				if(g_CurrentState==State_MainMenu_Menu)

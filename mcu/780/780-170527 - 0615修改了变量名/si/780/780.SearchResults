@@ -1,0 +1,6 @@
+---- g_TFT_X_point Æ¥Åä (5 in 2 ÎÄ¼þ) ----
+Screen-set.c://u16 g_TFT_X_point[8]={0};
+Screen-set.c://		g_TFT_X_point[col]=g_screen_line_column_pixel[0][col]*point_X/1920;
+Screen-set.c://			g_TFT_display_para[line*gScreenCol+col][2]=point_end_X+g_TFT_X_point[col];	
+Screen-set.c://			point_end_X=point_end_X+g_TFT_X_point[col]+2;		
+Screen-set.h://extern u16 g_TFT_X_point[8];

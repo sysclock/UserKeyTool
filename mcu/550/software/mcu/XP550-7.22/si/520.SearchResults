@@ -1,0 +1,986 @@
+---- main 匹配 (216 in 17 文件) ----
+Common.h:447
+#define MAIN       1
+#define SUB         2
+
+Core_cm3.c:79
+ * @brief  Return the Main Stack Pointer
+ *
+ * @return Main Stack Pointer
+ *
+ * Return the current value of the MSP (main stack pointer)
+ * Cortex processor register
+ */
+Core_cm3.c:93
+ * @brief  Set the Main Stack Pointer
+ *
+ * @param  topOfMainStack  Main Stack Pointer
+ *
+ * Assign the value mainStackPointer to the MSP 
+ * (main stack pointer) Cortex processor register
+ */
+__ASM void __set_MSP(uint32_t mainStackPointer)
+Core_cm3.c:287
+ * @brief  Return the Main Stack Pointer
+ *
+ * @return Main Stack Pointer
+ *
+ * Return the current value of the MSP (main stack pointer)
+ * Cortex processor register
+ */
+Core_cm3.c:301
+ * @brief  Set the Main Stack Pointer
+ *
+ * @param  topOfMainStack  Main Stack Pointer
+ *
+ * Assign the value mainStackPointer to the MSP 
+ * (main stack pointer) Cortex processor register
+ */
+void __set_MSP(uint32_t topOfMainStack)
+Core_cm3.c:469
+ * @brief  Return the Main Stack Pointer
+ *
+ * @return Main Stack Pointer
+ *
+ * Return the current value of the MSP (main stack pointer)
+ * Cortex processor register
+ */
+Core_cm3.c:488
+ * @brief  Set the Main Stack Pointer
+ *
+ * @param  topOfMainStack  Main Stack Pointer
+ *
+ * Assign the value mainStackPointer to the MSP 
+ * (main stack pointer) Cortex processor register
+ */
+void __set_MSP(uint32_t topOfMainStack) __attribute__( ( naked ) );
+Core_cm3.h:84
+#define __CM3_CMSIS_VERSION_MAIN  (0x01)                                                       /*!< [31:16] CMSIS HAL main version */
+#define __CM3_CMSIS_VERSION_SUB   (0x30)                                                       /*!< [15:0]  CMSIS HAL sub version  */
+#define __CM3_CMSIS_VERSION       ((__CM3_CMSIS_VERSION_MAIN << 16) | __CM3_CMSIS_VERSION_SUB) /*!< CMSIS HAL version number       */
+Core_cm3.h:811
+ * @brief  Return the Main Stack Pointer
+ *
+ * @return Main Stack Pointer
+ *
+ * Return the current value of the MSP (main stack pointer)
+ * Cortex processor register
+ */
+Core_cm3.h:821
+ * @brief  Set the Main Stack Pointer
+ *
+ * @param  topOfMainStack  Main Stack Pointer
+ *
+ * Assign the value mainStackPointer to the MSP 
+ * (main stack pointer) Cortex processor register
+ */
+extern void __set_MSP(uint32_t topOfMainStack);
+Core_cm3.h:1097
+ * @brief  Return the Main Stack Pointer
+ *
+ * @return Main Stack Pointer
+ *
+ * Return the current value of the MSP (main stack pointer)
+ * Cortex processor register
+ */
+Core_cm3.h:1107
+ * @brief  Set the Main Stack Pointer
+ *
+ * @param  topOfMainStack  Main Stack Pointer
+ *
+ * Assign the value mainStackPointer to the MSP 
+ * (main stack pointer) Cortex processor register
+ */
+extern void __set_MSP(uint32_t topOfMainStack);
+Core_cm3.h:1240
+ * @brief  Return the Main Stack Pointer
+ *
+ * @return Main Stack Pointer
+ *
+ * Return the current value of the MSP (main stack pointer)
+ * Cortex processor register
+ */
+Core_cm3.h:1250
+ * @brief  Set the Main Stack Pointer
+ *
+ * @param  topOfMainStack  Main Stack Pointer
+ *
+ * Assign the value mainStackPointer to the MSP 
+ * (main stack pointer) Cortex processor register
+ */
+extern void __set_MSP(uint32_t topOfMainStack);
+Keypad.c:24
+        //MAIN->   AV1, AV2,AV3,AV4, DVI, YPBPR,VGA,VGA2,HDMI ,SDI,DP
+//SUB
+/*										AV1	 AV2  AV3   AV4     DVI1   DVI2   YBR   VGA      VGA2   HDMI    SDI   USB    DP	 */
+Keypad.c:44
+//         //MAIN->   AV1, AV2,AV3,AV4, DVI, YPBPR,VGA,VGA2,HDMI ,SDI,DP
+// //SUB
+
+Keypad.c:288
+	g_ActiveImageValue=MAIN;
+	g_ActiveAudioWin=MAIN;
+	g_VolumeValue=100;    
+	g_MainFreezeFlag=UNFREEZE;
+Keypad.c:714
+	if(g_MutiWindow==SAMEPIPIMAGE&&g_NextPointImage==MAIN&&(g_SubInput==INPUTSOURCE_CVBS||g_SubInput==INPUTSOURCE_CVBS2
+		||g_SubInput==INPUTSOURCE_CVBS3||g_SubInput==INPUTSOURCE_CVBS4
+	#if(MATHINE_TYPE==XP_530)
+Keypad.c:722
+		SetInputSource(g_SubInput,MAIN);
+		g_MainInput=g_SubInput;
+		delay(8);
+Keypad.c:726
+		SetWhichImageOnTop(MAIN);	
+		SetInputSource(preMainInput,SUB);					
+		clearLineFromAddr(0x81);
+Keypad.c:758
+				chinesedisplay(0x90, "Switch Main Input");
+		}
+		else if((g_ActiveImageValue==MAIN&&!CheckDualSource(g_SubInput-1, input-1))
+			||(g_ActiveImageValue==SUB)&&!CheckDualSource(g_MainInput-1, input-1))
+		{
+Keypad.c:771
+				SetInputSource(g_MainInput,MAIN);
+			}
+		}
+Keypad.c:778
+			if(g_ActiveImageValue==MAIN)
+			{
+				if(g_LanguageFlag==CHINESE)
+Keypad.c:783
+					chinesedisplay(0x90, "Switch Main Input");
+			}
+			else
+Keypad.c:798
+			SetInputSource(input,MAIN);
+			
+			clearlcd();
+Keypad.c:824
+		else if((g_ActiveImageValue==MAIN&&!CheckDualSource(g_SubInput-1, input-1))
+			||(g_ActiveImageValue==SUB)&&!CheckDualSource(g_MainInput-1, input-1))
+		{
+Keypad.c:839
+		if(g_NextPointImage==MAIN)
+		{
+			if(g_SubInput==input) //如果与当前输入源相同
+Keypad.c:871
+					SetInputSource(input,MAIN);
+					clearlcd();
+					DisplayLCDInputSrc(0x81,"     -->");
+Keypad.c:964
+					SetInputSource(input,MAIN);
+					clearlcd();
+					DisplayLCDInputSrc(0x81,"<--     ");
+Keypad.c:1815
+					if((g_MainInput==INPUTSOURCE_USB||(g_NextPointImage==MAIN&&g_SubInput==INPUTSOURCE_USB))&&IsUsbState())
+						DealKey2Usb(keyVal);
+					else				
+Keypad.c:1823
+						if((g_MainInput==INPUTSOURCE_USB||(g_NextPointImage==MAIN&&g_SubInput==INPUTSOURCE_USB))&&IsUsbState())
+						DealKey2Usb(keyVal);
+					else
+Keypad.c:1845
+					if((g_MainInput==INPUTSOURCE_USB||(g_NextPointImage==MAIN&&g_SubInput==INPUTSOURCE_USB))&&IsUsbState())
+						DealKey2Usb(keyVal);
+					else
+Keypad.c:1852
+						if((g_MainInput==INPUTSOURCE_USB||(g_NextPointImage==MAIN&&g_SubInput==INPUTSOURCE_USB))&&IsUsbState())
+						DealKey2Usb(keyVal);
+					else
+Keypad.c:2185
+				//SetScalerValue(HVSIZE,g_ScreenHSize,g_ScreenVSize,MAIN);	
+				//SetScalerValue(HVPOS,g_ScreenHPos,g_ScreenVPos,MAIN);	
+				//SetScalerValue(HVSIZE,g_ScreenHSize,g_ScreenVSize,SUB);
+				//SetScalerValue(HVPOS,g_ScreenHPos,g_ScreenVPos,SUB);
+Keypad.c:2197
+				SetScalerHVValue(HVSIZE,MAIN);
+				SetScalerHVValue(HVPOS,MAIN);
+				SetScalerHVValue(HVSIZE,SUB);
+				SetScalerHVValue(HVPOS,SUB);
+Keypad.c:2229
+				//SetScalerValue(HVSIZE,g_ScreenHSize,g_ScreenVSize,MAIN);
+				//SetScalerValue(HVPOS,g_ScreenHPos,g_ScreenVPos,MAIN);	
+				//SetScalerValue(HVSIZE,g_ScreenHSize,g_ScreenVSize,SUB);
+				//SetScalerValue(HVPOS,g_ScreenHPos,g_ScreenVPos,SUB);
+Keypad.c:2241
+				SetScalerHVValue(HVSIZE,MAIN);
+				SetScalerHVValue(HVPOS,MAIN);
+				SetScalerHVValue(HVSIZE,SUB);
+				SetScalerHVValue(HVPOS,SUB);
+Keypad.c:2269
+				//SetScalerValue(HVSIZE,g_ScreenHSize,g_ScreenVSize,MAIN);
+				//SetScalerValue(HVPOS,g_ScreenHPos,g_ScreenVPos,MAIN);	
+				//SetScalerValue(HVSIZE,g_ScreenHSize,g_ScreenVSize,SUB);
+				//SetScalerValue(HVPOS,g_ScreenHPos,g_ScreenVPos,SUB);
+Keypad.c:2281
+				SetScalerHVValue(HVSIZE,MAIN);
+				SetScalerHVValue(HVPOS,MAIN);
+				SetScalerHVValue(HVSIZE,SUB);
+				SetScalerHVValue(HVPOS,SUB);
+Keypad.c:4375
+		0x80,g_DirectSetMainSizeStr,"Set Main Image Size",
+		LCDADDR91,NULL,NULL,
+		{
+LCD.c:4
+ [Module Name]: Main.c
+ [Date]:        09-May-2012
+ [Comment]:
+LCD.c:214
+	if(image==MAIN)
+	{
+			display_input=g_MainInput;
+LCD.c:306
+			image=MAIN;
+		}
+		else
+LCD.c:317
+			image=MAIN;
+		}
+		else
+Main.c:2
+* File Name          : main.c
+* Author             : MCD Application Team
+* Version            : V2.0.1
+Main.c:6
+* Description        : Main program body.
+********************************************************************************
+* THE PRESENT FIRMWARE WHICH IS FOR GUIDANCE ONLY AIMS AT PROVIDING CUSTOMERS
+Main.c:98
+* Function Name  : main
+* Description    : Main program.
+* Input          : None
+* Output         : None
+Main.c:104
+int main(void)
+{	
+//	U16 u8LogoID=1;
+MenuTbl.c:56
+	g_ActiveImageValue=MAIN;
+	DealCurrentState(State_DualImage_Set_MainSize);
+	chinesedisplay(0x91, "_   x");
+MenuTbl.c:101
+			image=MAIN;
+		}
+		else
+MenuTbl.c:110
+		if(g_ActiveImageValue==MAIN||g_MutiWindow==SINGLEIMAGE)
+		{
+			image=MAIN;
+		}
+		else
+MenuTbl.c:151
+			if(g_ActiveImageValue==MAIN)
+			{	
+				DisFourNumValue(g_MainScalerHSize,LCDADDR91);
+MenuTbl.c:163
+			if(g_ActiveImageValue==MAIN)
+			{	
+				DisFourNumValue(g_MainScalerHPos,LCDADDR91);
+MenuTbl.c:180
+			if(image==MAIN)
+			{	
+				if(g_MainInput==INPUTSOURCE_VGA)
+MenuTbl.c:235
+			if(image==MAIN)
+			{	
+				if(g_MainInput==INPUTSOURCE_VGA)
+MenuTbl.c:409
+		if(g_ActiveImageValue==MAIN)
+		{
+			if(g_LanguageFlag==CHINESE)
+MenuTbl.c:432
+	if(g_ActiveImageValue==MAIN)
+	{
+		if(g_MainFreezeFlag==UNFREEZE)
+MenuTbl.c:473
+	if(((g_SwitchEffectValue==NormalSwitchIdx||g_SwitchEffectValue==FuseSwitchIdx)&&g_ActiveImageValue==MAIN)||(g_SwitchEffectValue!=NormalSwitchIdx&&g_NextPointImage==SUB))
+	{
+		if(g_MainFreezeFlag==UNFREEZE)
+MenuTbl.c:478
+			SetFreezeImage(MAIN,FREEZE);
+			if(g_LanguageFlag==CHINESE)
+				chinesedisplay(0x91, g_FreezeStr);
+MenuTbl.c:487
+			SetFreezeImage(MAIN,UNFREEZE);
+			if(g_LanguageFlag==CHINESE)
+				chinesedisplay(0x91, g_LiveStr);
+MenuTbl.c:494
+	else if(((g_SwitchEffectValue==NormalSwitchIdx||g_SwitchEffectValue==FuseSwitchIdx)&&g_ActiveImageValue==SUB)||(g_SwitchEffectValue!=NormalSwitchIdx&&g_NextPointImage==MAIN))
+	{
+		if(g_SubFreezeFlag==FREEZE)
+MenuTbl.c:569
+		if(MainOrSub==MAIN)
+		{
+			//SetZoomValue(HSIZE,g_MainZoomHSize, MainOrSub);
+MenuTbl.c:575
+			SetZoomValueHV(HVSIZE,g_MainZoomHSize,g_MainZoomVSize, MAIN);
+			SetZoomValueHV(HVPOS,g_MainZoomHPos,g_MainZoomVPos, MAIN);
+		}
+		else if(MainOrSub==SUB)
+MenuTbl.c:861
+ 				FullZoomScreen(MAIN,&g_VGAFullOrPartValue);
+			else
+				FullZoomVGA(MAIN);
+		}	
+		else if(g_MainInput==INPUTSOURCE_DVI)
+MenuTbl.c:868
+				FullZoomScreen(MAIN,&g_DVIFullOrPartValue);
+			else
+				FullZoomDVI(MAIN);
+		}
+		else  if(g_MainInput==INPUTSOURCE_HDMI)
+MenuTbl.c:875
+ 				FullZoomScreen(MAIN,&g_HDMIFullOrPartValue);
+			else
+				FullZoomHDMI(MAIN);
+		}
+		else if(g_MainInput==INPUTSOURCE_VGA2)
+MenuTbl.c:881
+			FullZoomScreen(MAIN,&g_VGA2FullOrPartValue);
+		}
+		else if(g_MainInput==INPUTSOURCE_DVI2)
+MenuTbl.c:885
+			FullZoomScreen(MAIN,&g_DVI2FullOrPartValue);
+		}
+
+MenuTbl.c:892
+//  				FullZoomScreen(MAIN,&g_OtherFullOrPartValue);
+ 			ErrorFullZoom();
+			
+MenuTbl.c:896
+				FullZoomVideo(MAIN);
+		}
+		
+MenuTbl.c:909
+			image=MAIN;
+		}
+		else
+MenuTbl.c:920
+			if(((image==MAIN)&&(g_MainVGAZoomHSize==0)&&(g_MainVGAZoomVSize==0))
+				||((image==SUB)&&(g_SubVGAZoomHSize==0)&&(g_SubVGAZoomVSize==0)))
+				{
+MenuTbl.c:934
+			if(((image==MAIN)&&(g_MainDVIZoomHSize==0)&&(g_MainDVIZoomVSize==0))
+				||((image==SUB)&&(g_SubDVIZoomHSize==0)&&(g_SubDVIZoomVSize==0)))
+ 				FullZoomScreen(image,&g_DVIFullOrPartValue);
+MenuTbl.c:942
+			if(((image==MAIN)&&(g_MainHDMIZoomHSize==0)&&(g_MainHDMIZoomVSize==0))
+				||((image==SUB)&&(g_SubHDMIZoomHSize==0)&&(g_SubHDMIZoomVSize==0)))
+				FullZoomScreen(image,&g_HDMIFullOrPartValue);
+MenuTbl.c:950
+			if(((image==MAIN)&&(g_MainVGA2ZoomHSize==0)&&(g_MainVGA2ZoomVSize==0))
+				||((image==SUB)&&(g_SubVGA2ZoomHSize==0)&&(g_SubVGA2ZoomVSize==0)))
+				{
+MenuTbl.c:964
+			if(((image==MAIN)&&(g_MainDVI2ZoomHSize==0)&&(g_MainDVI2ZoomVSize==0))
+				||((image==SUB)&&(g_SubDVI2ZoomHSize==0)&&(g_SubDVI2ZoomVSize==0)))
+ 				FullZoomScreen(image,&g_DVI2FullOrPartValue);
+MenuTbl.c:972
+			if(((image==MAIN)&&(g_MainZoomHSize==0)&&(g_MainZoomVSize==0))
+				||((image==SUB)&&(g_SubZoomHSize==0)&&(g_SubZoomVSize==0)))
+//  				FullZoomScreen(image,&g_OtherFullOrPartValue);
+MenuTbl.c:998
+ 				FullZoomScreen(MAIN,&g_VGAFullOrPartValue);
+// 				DisplayOneInt(0x88,g_VGAFullOrPartValue);
+				}
+MenuTbl.c:1002
+				FullZoomVGA(MAIN);
+		}
+		else if(g_MainInput==INPUTSOURCE_DVI)
+MenuTbl.c:1007
+ 				FullZoomScreen(MAIN,&g_DVIFullOrPartValue);
+			else
+				FullZoomDVI(MAIN);
+		}
+		else  if(g_MainInput==INPUTSOURCE_HDMI)
+MenuTbl.c:1014
+ 				FullZoomScreen(MAIN,&g_HDMIFullOrPartValue);
+			else
+				FullZoomHDMI(MAIN);
+		}
+		else if(g_MainInput==INPUTSOURCE_VGA2)
+MenuTbl.c:1020
+			FullZoomScreen(MAIN,&g_VGA2FullOrPartValue);
+		}
+		else if(g_MainInput==INPUTSOURCE_DVI2)
+MenuTbl.c:1024
+			FullZoomScreen(MAIN,&g_DVI2FullOrPartValue);
+		}
+		else
+MenuTbl.c:1031
+				FullZoomVideo(MAIN);
+		}
+	}
+MenuTbl.c:1044
+			image=MAIN;
+		}
+		else
+MenuTbl.c:1054
+			if(((image==MAIN)&&(g_MainVGAZoomHSize==0)&&(g_MainVGAZoomVSize==0))
+				||((image==SUB)&&(g_SubVGAZoomHSize==0)&&(g_SubVGAZoomVSize==0)))
+				FullZoomScreen(image,&g_VGAFullOrPartValue);
+MenuTbl.c:1063
+			if(((image==MAIN)&&(g_MainDVIZoomHSize==0)&&(g_MainDVIZoomVSize==0))
+				||((image==SUB)&&(g_SubDVIZoomHSize==0)&&(g_SubDVIZoomVSize==0)))
+				FullZoomScreen(image,&g_DVIFullOrPartValue);
+MenuTbl.c:1071
+			if(((image==MAIN)&&(g_MainHDMIZoomHSize==0)&&(g_MainHDMIZoomVSize==0))
+				||((image==SUB)&&(g_SubHDMIZoomHSize==0)&&(g_SubHDMIZoomVSize==0)))
+				FullZoomScreen(image,&g_HDMIFullOrPartValue);
+MenuTbl.c:1080
+// 			if(((image==MAIN)&&(g_MainVGA2ZoomHSize==0)&&(g_MainVGA2ZoomVSize==0))
+// 				||((image==SUB)&&(g_SubVGA2ZoomHSize==0)&&(g_SubVGA2ZoomVSize==0)))
+// 				{
+MenuTbl.c:1092
+// 			if(((image==MAIN)&&(g_MainDVI2ZoomHSize==0)&&(g_MainDVI2ZoomVSize==0))
+// 				||((image==SUB)&&(g_SubDVI2ZoomHSize==0)&&(g_SubDVI2ZoomVSize==0)))
+ 				FullZoomScreen(image,&g_DVI2FullOrPartValue);
+MenuTbl.c:1100
+			if(((image==MAIN)&&(g_MainZoomHSize==0)&&(g_MainZoomVSize==0))
+				||((image==SUB)&&(g_SubZoomHSize==0)&&(g_SubZoomVSize==0)))
+// 					FullZoomScreen(image,&g_OtherFullOrPartValue);//ErrorF ullZoom();//  //lyg修改 20160627
+MenuTbl.c:1113
+		if(g_ActiveImageValue==MAIN)
+			inputSource=g_MainInput;
+		else
+MenuTbl.c:1119
+			if((g_ActiveImageValue==MAIN)&&(g_MainVGAZoomHSize==0)&&(g_MainVGAZoomVSize==0))
+			{
+				FullZoomScreen(MAIN,&g_VGAFullOrPartValue);
+			}
+			else if((g_ActiveImageValue==SUB)&&(g_SubVGAZoomHSize==0)&&(g_SubVGAZoomVSize==0))
+MenuTbl.c:1130
+			if((g_ActiveImageValue==MAIN)&&(g_MainDVIZoomHSize==0)&&(g_MainDVIZoomVSize==0))
+			{
+				FullZoomScreen(MAIN,&g_DVIFullOrPartValue);
+			}
+			else if((g_ActiveImageValue==SUB)&&(g_SubDVIZoomHSize==0)&&(g_SubDVIZoomVSize==0))
+MenuTbl.c:1141
+			if((g_ActiveImageValue==MAIN)&&(g_MainHDMIZoomHSize==0)&&(g_MainHDMIZoomVSize==0))
+			{
+				FullZoomScreen(MAIN,&g_HDMIFullOrPartValue);
+			}
+			else if((g_ActiveImageValue==SUB)&&(g_SubHDMIZoomHSize==0)&&(g_SubHDMIZoomVSize==0))
+MenuTbl.c:1152
+			if((g_ActiveImageValue==MAIN)&&(g_MainVGA2ZoomHSize==0)&&(g_MainVGA2ZoomVSize==0))
+			{
+				FullZoomScreen(MAIN,&g_VGA2FullOrPartValue);
+			}
+			else if((g_ActiveImageValue==SUB)&&(g_SubVGA2ZoomHSize==0)&&(g_SubVGA2ZoomVSize==0))
+MenuTbl.c:1163
+			if((g_ActiveImageValue==MAIN)&&(g_MainDVI2ZoomHSize==0)&&(g_MainDVI2ZoomVSize==0))
+			{
+				FullZoomScreen(MAIN,&g_DVI2FullOrPartValue);
+			}
+			else if((g_ActiveImageValue==SUB)&&(g_SubDVI2ZoomHSize==0)&&(g_SubDVI2ZoomVSize==0))
+MenuTbl.c:1174
+			if((g_ActiveImageValue==MAIN)&&(g_MainZoomHSize==0)&&(g_MainZoomVSize==0))
+				ErrorFullZoom();
+			else if((g_ActiveImageValue==SUB)&&(g_SubZoomHSize==0)&&(g_SubZoomVSize==0))
+MenuTbl.c:1253
+		if(g_ActiveImageValue==MAIN)
+		{
+			g_ActiveImageValue=SUB;
+MenuTbl.c:1259
+			g_ActiveImageValue=MAIN;	
+		}
+		if(StateDisWhichImage())
+MenuTbl.c:1304
+				if(g_ActiveImageValue==MAIN)
+				{				
+					nInput=g_MainInput;	
+MenuTbl.c:1556
+				if(g_NextPointImage==MAIN)
+				{
+					DisplayLCDInputSrc(0x81," -> ");
+MenuTbl.c:1576
+				if(g_NextPointImage==MAIN)
+				{
+					DisplayLCDInputSrc(0x81," -> ");
+MenuTbl.c:1790
+					if(g_ActiveImageValue==MAIN&&wValue+g_StepValue+g_MainScalerHPos>(g_ScreenHPos+g_ScreenHSize))
+						wValue=g_PanelWidth-g_MainScalerHPos;
+					else if(g_ActiveImageValue==SUB&&wValue+g_StepValue+g_SubScalerHPos>(g_ScreenHPos+g_ScreenHSize))
+MenuTbl.c:1799
+					if(g_ActiveImageValue==MAIN&&wValue+g_StepValue+g_MainScalerVPos>(g_ScreenVPos+g_ScreenVSize))
+						wValue=g_PanelHeight-g_MainScalerVPos;					
+					else if(g_ActiveImageValue==SUB&&wValue+g_StepValue+g_SubScalerVPos>(g_ScreenVPos+g_ScreenVSize))
+MenuTbl.c:1813
+				if(g_ActiveImageValue==MAIN&&wValue+g_StepValue+g_MainScalerHSize>(g_ScreenHPos+g_ScreenHSize))
+					wValue=g_PanelWidth-g_MainScalerHSize;
+				else if(g_ActiveImageValue==SUB&&wValue+g_StepValue+g_SubScalerHSize>(g_ScreenHPos+g_ScreenHSize))
+MenuTbl.c:1822
+				if(g_ActiveImageValue==MAIN&&wValue+g_StepValue+g_MainScalerVSize>(g_ScreenVPos+g_ScreenVSize))
+					wValue=g_PanelHeight-g_MainScalerVSize;
+				else if(g_ActiveImageValue==SUB&&wValue+g_StepValue+g_SubScalerVSize>(g_ScreenVPos+g_ScreenVSize))
+MenuTbl.c:2102
+					if(g_NextPointImage==MAIN)
+						GetInputSrcFormat(SUB,&g_InSrcHSize,&g_InSrcVSize);	
+					else
+						GetInputSrcFormat(MAIN,&g_InSrcHSize,&g_InSrcVSize);
+				}
+				else
+MenuTbl.c:2443
+				g_NextPointImage=MAIN;
+			}
+			else
+MenuTbl.c:2488
+				g_NextPointImage=MAIN;
+			}
+			else
+RTC.c:261
+		if(g_ActiveImageValue==MAIN)
+			input=g_MainInput;
+		else
+RTC.c:268
+		if(g_NextPointImage==MAIN)
+			input=g_SubInput;
+		else
+RTC.c:692
+				g_ActiveImageValue=MAIN;
+				SetInputSourceSwitch(g_ScheduleInput1);
+				LightInputSrcLED();
+RTC.c:711
+				g_ActiveImageValue=MAIN;
+				SetInputSourceSwitch(g_ScheduleInput1);
+				LightInputSrcLED();
+RTC.c:721
+				g_ActiveImageValue=MAIN;
+				SetInputSourceSwitch(g_ScheduleInput2);
+				LightInputSrcLED();			
+RTC.c:740
+				g_ActiveImageValue=MAIN;
+				SetInputSourceSwitch(g_ScheduleInput2);
+				LightInputSrcLED();
+RTC.c:750
+				g_ActiveImageValue=MAIN;
+				SetInputSourceSwitch(g_ScheduleInput3);
+				LightInputSrcLED();			
+RTC.c:769
+				g_ActiveImageValue=MAIN;
+				SetInputSourceSwitch(g_ScheduleInput3);
+				LightInputSrcLED();
+SendMsg.c:212
+	if(MainOrSub==MAIN||g_MutiWindow==SINGLEIMAGE)
+	{
+		MainOrSub=MAIN;
+		G_SendBuf[EVENTID_IDX]=MAIN_SRC_EVENT;
+		g_MainInput=inputsrc;
+SendMsg.c:387
+		g_NextPointImage=MAIN;
+		SetWhichImageOnTop(SUB);
+	}
+SendMsg.c:412
+	if(MainOrSUb==MAIN||g_MutiWindow==SINGLEIMAGE)
+		G_SendBuf[PARA1_IDX]=0x08;
+	else if(MainOrSUb==SUB)
+SendMsg.c:422
+	if(MainOrSUb==MAIN||g_MutiWindow==SINGLEIMAGE)
+	{
+		G_SendBuf[EVENTID_IDX]=MAIN_ZOOM_EVENT;
+SendMsg.c:438
+	if(MainOrSUb==MAIN||g_MutiWindow==SINGLEIMAGE)
+	{
+		G_SendBuf[EVENTID_IDX]=MAIN_ZOOM_EVENT;
+SendMsg.c:456
+	if(MainOrSUb==MAIN||g_MutiWindow==SINGLEIMAGE)
+	{
+		G_SendBuf[EVENTID_IDX]=MAIN_ZOOM_EVENT;
+SendMsg.c:481
+	if(MainOrSUb==MAIN||g_MutiWindow==SINGLEIMAGE)
+	{
+		G_SendBuf[EVENTID_IDX]=MAIN_ZOOM_EVENT;
+SendMsg.c:608
+			chinesedisplay(0x98,  "main");
+		#endif
+	}
+SendMsg.c:747
+	if(MainOrSUb==MAIN||g_MutiWindow==SINGLEIMAGE)
+	{
+		G_SendBuf[EVENTID_IDX]=MAIN_SCALER_EVENT;
+SendMsg.c:796
+	if(MainOrSUb==MAIN||g_MutiWindow==SINGLEIMAGE)
+	{
+		G_SendBuf[EVENTID_IDX]=MAIN_SCALER_EVENT;
+SendMsg.c:849
+	if(MainOrSUb==MAIN||g_MutiWindow==SINGLEIMAGE)
+	{
+		G_SendBuf[EVENTID_IDX]=MAIN_SCALER_EVENT;
+SendMsg.c:948
+			SetScalerHVValue(HVSIZE,MAIN);
+		}
+		if(g_MainScalerHPos!=0||g_MainScalerVPos!=0)
+			SetScalerHVValue(HVPOS,MAIN);
+	}
+}
+SendMsg.c:970
+	SetInputSource(g_MainInput, MAIN);	
+
+	if(g_MutiWindow==SAMEPIPIMAGE)
+SendMsg.c:975
+			SetWhichImageOnTop(MAIN);
+		else
+			SetWhichImageOnTop(SUB);
+SendMsg.c:1000
+		SetScreenPART(MAIN);
+	}
+	if(g_MutiWindow!=SINGLEIMAGE)
+SendMsg.c:1033
+	SetScalerHVValue(HVSIZE,MAIN);
+	SetScalerHVValue(HVPOS,MAIN);
+	if(g_MutiWindow!=SINGLEIMAGE)
+	{		
+SendMsg.c:1041
+	SetZoomHVValue(HVSIZE,MAIN);
+	SetZoomHVValue(HVPOS,MAIN);
+	
+	SetZoomHVValue(VGA_HVSIZE,MAIN);
+	SetZoomHVValue(VGA_HVPOS,MAIN);
+	SetZoomHVValue(DVI_HVSIZE,MAIN);
+	SetZoomHVValue(DVI_HVPOS,MAIN);
+	SetZoomHVValue(HDMI_HVSIZE,MAIN);
+	SetZoomHVValue(HDMI_HVPOS,MAIN);
+	SetZoomHVValue(OTHER_HVSIZE,MAIN);
+	SetZoomHVValue(OTHER_HVPOS,MAIN);
+	
+	if(g_MutiWindow!=SINGLEIMAGE)
+SendMsg.c:1108
+ 	if(MainOrSub==MAIN||g_MutiWindow==SINGLEIMAGE)
+		G_SendBuf[EVENTID_IDX]=MAIN_ZOOM_EVENT;
+	else if(MainOrSub==SUB)
+SendMsg.c:1117
+	if(MainOrSub==MAIN)
+	{
+		if((g_MainInput==INPUTSOURCE_CVBS3) ||(g_MainInput==INPUTSOURCE_VGA2)||(g_MainInput==INPUTSOURCE_DVI2)||(g_MainInput==INPUTSOURCE_USB))
+StateData.c:2018
+		GetInputSrcFormat(MAIN,&HSize,&VSize);
+		delay(3);
+	}
+StateData.c:2147
+	SetInputSource(g_MainInput, MAIN);
+	
+	SetScalerHVValue(HVSIZE,MAIN);
+	if(g_MutiWindow==SAMEPIPIMAGE)
+	{
+StateData.h:57
+	//Main or Sub
+	State_ActiveImage_Main,
+	State_ActiveImage_Sub,
+StateMachine.c:132
+		//SetScalerHVValue(HVSIZE,MAIN);
+		//SetScalerHVValue(HVPOS,MAIN);
+		if(Updata_Execute((U8*)genericEEPROMMemU8,(U16*)genericEEPROMMemU16))
+		{
+StateMachine.c:164
+	SetScalerHVValue(HVSIZE,MAIN);
+	SetScalerHVValue(HVPOS,MAIN);
+	g_MutiWindow=SINGLEIMAGE;		
+	Save(DEFAULT_MODE);
+StateMachine.c:183
+	SetScalerHVValue(HVSIZE,MAIN);
+	SetScalerHVValue(HVPOS,MAIN);
+	SetScalerHVValue(HVSIZE,SUB);
+	SetScalerHVValue(HVPOS,SUB);
+StateMachine.c:215
+	SetScalerHVValue(HVSIZE,MAIN);
+	SetScalerHVValue(HVPOS,MAIN);
+	SetScalerHVValue(HVSIZE,SUB);
+	SetScalerHVValue(HVPOS,SUB);
+StateMachine.c:250
+		SetScalerHVValue(HVSIZE,MAIN);
+		SetScalerHVValue(HVPOS,MAIN);
+		if(g_MutiWindow!=SINGLEIMAGE)
+		{			
+StateMachine.c:637
+					SetScalerHVValue(HVSIZE,MAIN);						
+				}
+				else if(g_MutiWindow==PIPIMAGE||g_MutiWindow==SAMEPIPIMAGE)
+StateMachine.c:641
+					SetScalerHVValue(HVSIZE,MAIN);
+					SetScalerHVValue(HVSIZE,SUB);
+				}
+StateMachine.c:646
+					SetScalerHVValue(HVSIZE,MAIN);
+					SetScalerHVValue(HVPOS,SUB);
+					SetScalerHVValue(HVSIZE,SUB);
+StateMachine.c:655
+					SetScalerHVValue(HVPOS,MAIN);
+				}
+				else
+StateMachine.c:659
+					SetScalerHVValue(HVPOS,MAIN);
+					SetScalerHVValue(HVPOS,SUB);
+				}
+StateMachine.c:666
+				if(g_ActiveImageValue==MAIN||g_MutiWindow==SINGLEIMAGE||g_MutiWindow==SAMEPIPIMAGE)
+				{
+					SetScalerHVValue(HVSIZE,MAIN);
+					if(g_MutiWindow==SAMEPIPIMAGE)
+					{
+StateMachine.c:682
+				if(g_ActiveImageValue==MAIN||g_MutiWindow==SINGLEIMAGE||g_MutiWindow==SAMEPIPIMAGE)
+				{
+					SetScalerHVValue(HVPOS,MAIN);
+					if(g_MutiWindow==SAMEPIPIMAGE)
+					{
+StateMachine.c:833
+						//SetScalerHVValue(HVSIZE,MAIN);						
+					}
+					else if(g_MutiWindow==PIPIMAGE)
+StateMachine.c:838
+						//SetScalerHVValue(HVSIZE,MAIN);
+						g_SubScalerHSize=wValue/3;
+						//SetScalerHVValue(HVSIZE,SUB);
+StateMachine.c:845
+						//SetScalerHVValue(HVSIZE,MAIN);
+						g_SubScalerHPos=g_MainScalerHPos+g_MainScalerHSize;
+						//SetScalerHVValue(HVPOS,SUB);
+StateMachine.c:854
+						//SetScalerHVValue(HVSIZE,MAIN);
+						g_SubScalerHSize=wValue;
+						//SetScalerHVValue(HVSIZE,SUB);
+StateMachine.c:868
+						//SetScalerHVValue(HVSIZE,MAIN);
+					}
+					else if(g_MutiWindow==PIPIMAGE)
+StateMachine.c:873
+						//SetScalerHVValue(HVSIZE,MAIN);
+						g_SubScalerVSize=wValue/3;
+						//SetScalerHVValue(HVSIZE,SUB);
+StateMachine.c:880
+						//SetScalerHVValue(HVSIZE,MAIN);
+						g_SubScalerVSize=wValue;
+						//SetScalerHVValue(HVSIZE,SUB);
+StateMachine.c:887
+						//SetScalerHVValue(HVSIZE,MAIN);
+						g_SubScalerVSize=wValue;
+						//SetScalerHVValue(HVSIZE,SUB);
+StateMachine.c:903
+						//SetScalerHVValue(HVPOS,MAIN);
+					}
+					else if(g_MutiWindow==PIPIMAGE)
+StateMachine.c:908
+						//SetScalerHVValue(HVPOS,MAIN);
+						if(g_SubScalerHPos<wValue)
+						{
+StateMachine.c:918
+						//SetScalerHVValue(HVPOS,MAIN);
+						g_SubScalerHPos=g_MainScalerHPos+g_MainScalerHSize;
+						//SetScalerHVValue(HVPOS,SUB);
+StateMachine.c:925
+						//SetScalerHVValue(HVPOS,MAIN);
+						g_SubScalerHPos=wValue;
+						//SetScalerHVValue(HVPOS,SUB);
+StateMachine.c:938
+						//SetScalerHVValue(HVPOS,MAIN);
+					}
+					else if(g_MutiWindow==PIPIMAGE)
+StateMachine.c:943
+						//SetScalerHVValue(HVPOS,MAIN);
+					}
+					else if(g_MutiWindow==PBPIMAGE)
+StateMachine.c:948
+						//SetScalerHVValue(HVPOS,MAIN);
+						g_SubScalerVPos=wValue;
+						//SetScalerHVValue(HVPOS,SUB);
+StateMachine.c:955
+						//SetScalerHVValue(HVPOS,MAIN);
+						g_SubScalerVPos=wValue;
+						//SetScalerHVValue(HVPOS,SUB);
+StateMachine.c:987
+					if(g_ActiveImageValue==MAIN||g_MutiWindow==SINGLEIMAGE||g_MutiWindow==SAMEPIPIMAGE)
+					{
+						if((wValue+g_MainScalerHPos)>(g_ScreenHPos+g_ScreenHSize))
+StateMachine.c:992
+						//SetScalerHVValue(HVSIZE,MAIN);
+						if(g_MutiWindow==SAMEPIPIMAGE)
+						{
+StateMachine.c:1009
+					if(g_ActiveImageValue==MAIN||g_MutiWindow==SINGLEIMAGE||g_MutiWindow==SAMEPIPIMAGE)
+					{
+						if((wValue+g_MainScalerVPos)>(g_ScreenVPos+g_ScreenVSize))
+StateMachine.c:1014
+						//SetScalerHVValue(HVSIZE,MAIN);
+						if(g_MutiWindow==SAMEPIPIMAGE)
+						{
+StateMachine.c:1068
+						g_ActiveImageValue=MAIN;	
+					}
+					else	
+StateMachine.c:1081
+					if(g_ActiveImageValue==MAIN||g_MutiWindow==SINGLEIMAGE||g_MutiWindow==SAMEPIPIMAGE)
+					{
+						if((wValue+g_MainScalerHSize)>(g_ScreenHPos+g_ScreenHSize))
+StateMachine.c:1086
+						//SetScalerHVValue(HVPOS,MAIN);
+						if(g_MutiWindow==SAMEPIPIMAGE)
+						{
+StateMachine.c:1103
+					if(g_ActiveImageValue==MAIN||g_MutiWindow==SINGLEIMAGE||g_MutiWindow==SAMEPIPIMAGE)
+					{
+						if((wValue+g_MainScalerVSize)>(g_ScreenVPos+g_ScreenVSize))
+StateMachine.c:1108
+						//SetScalerHVValue(HVPOS,MAIN);
+						if(g_MutiWindow==SAMEPIPIMAGE)
+						{
+StateMachine.c:1134
+					if(image==MAIN)
+					{
+						if(g_MainInput==INPUTSOURCE_VGA)
+StateMachine.c:1234
+					if(image==MAIN)
+					{
+						if(g_MainInput==INPUTSOURCE_VGA)
+StateMachine.c:1331
+					if(image==MAIN)
+					{
+						if(g_MainInput==INPUTSOURCE_VGA)
+StateMachine.c:1421
+					if(image==MAIN)
+					{
+						if(g_MainInput==INPUTSOURCE_VGA)
+StateMachine.c:1659
+	if(g_ActiveImageValue==MAIN)
+		curState=State_ActiveImage_Main;
+	else if(g_ActiveImageValue==SUB)
+StateMachine.c:1669
+	if(g_ActiveAudioWin==MAIN)
+		curState=State_Audio_Main;
+	else if(g_ActiveAudioWin==SUB)
+StateMachine.c:1697
+			if(g_ActiveImageValue==MAIN)
+			{
+				if(g_H_VFlag==__TRUE)
+StateMachine.c:1715
+			if(g_ActiveImageValue==MAIN)
+				wValue=g_MainScalerHPos;
+			else if(g_ActiveImageValue==SUB)
+StateMachine.c:1722
+			if(g_ActiveImageValue==MAIN)
+				wValue=g_MainScalerVPos;
+			else if(g_ActiveImageValue==SUB)
+StateMachine.c:1734
+				if(image==MAIN)
+				{
+					if(g_MainInput==INPUTSOURCE_VGA)
+StateMachine.c:1759
+				if(image==MAIN)
+				{
+					if(g_MainInput==INPUTSOURCE_VGA)
+StateMachine.c:1790
+				if(image==MAIN)
+				{
+					if(g_MainInput==INPUTSOURCE_VGA)
+StateMachine.c:1815
+				if(image==MAIN)
+				{
+					if(g_MainInput==INPUTSOURCE_VGA)
+StateMachine.c:1868
+			if(g_ActiveImageValue==MAIN)
+				wValue=g_MainFreezeFlag;
+			else if(g_ActiveImageValue==SUB)
+Stm32f10x.h:115
+#define __STM32F10X_STDPERIPH_VERSION_MAIN   (0x03) /*!< [31:16] STM32F10x Standard Peripheral Library main version */
+#define __STM32F10X_STDPERIPH_VERSION_SUB1   (0x03) /*!< [15:8]  STM32F10x Standard Peripheral Library sub1 version */
+#define __STM32F10X_STDPERIPH_VERSION_SUB2   (0x00) /*!< [7:0]  STM32F10x Standard Peripheral Library sub2 version */
+Stm32f10x.h:3085
+#define  SCB_CCR_USERSETMPEND                ((uint16_t)0x0002)            /*!< Enables user code to write the Software Trigger Interrupt register to trigger (pend) a Main exception */
+#define  SCB_CCR_UNALIGN_TRP                 ((uint16_t)0x0008)            /*!< Trap for unaligned access */
+#define  SCB_CCR_DIV_0_TRP                   ((uint16_t)0x0010)            /*!< Trap on Divide by 0 */
+Stm32f10x.h:4352
+#define  TIM_BDTR_MOE                        ((uint16_t)0x8000)            /*!<Main Output enable */
+
+/*******************  Bit definition for TIM_DCR register  ********************/
+Stm32f10x_it.c:7
+  * @brief   Main Interrupt Service Routines.
+  *          This file provides template for all exceptions handler and 
+  *          peripherals interrupt service routine.
+Strings.c:384
+const U8 g_MainImageEn[5]="Main";
+const U8 g_SubImage[6]=
+{
+Strings.c:395
+const U8 g_MainMenuEn[10]="Main Menu";
+const U8 g_MainMenuNum[14]=
+{
+System_stm32f10x.c:373
+  *         Called in startup_stm32f10x_xx.s/.c before jump to main.
+  * 	      This function configures the external SRAM mounted on STM3210E-EVAL
+  *         board (STM32 High density devices). This SRAM will be used as program
+USART.c:23
+		if(g_NextPointImage==MAIN)
+		{
+			if(CheckDualSource(g_SubInput-1, inputSrc-1))
+USART.c:27
+				SetInputSource(inputSrc,MAIN);
+				if(delayFlag)
+					delay(5);
+USART.c:57
+				SetInputSource(inputSrc,MAIN);
+				DisplayLCDInputSrc(0x81,"<--     ");				
+			}
+USART.c:68
+		if(image==MAIN&&CheckDualSource(g_SubInput-1, inputSrc-1))
+			SetInputSource(inputSrc,MAIN);
+		else if(image==SUB&&CheckDualSource(g_MainInput-1, inputSrc-1))
+			SetInputSource(inputSrc,SUB);
+USART.c:91
+	if(image==MAIN)
+		input=g_MainInput;
+	else if(image==SUB)
+USART.c:144
+		else if(g_MutiWindow!=SAMEPIPIMAGE&&((image==MAIN&&chMainSwitchIdx<8)||(image==SUB&&chSubSwitchIdx<8)))
+		{
+			SwitchInputMethods(BackupInput,image,__FALSE);
+USART.c:148
+			if(image==MAIN)
+				chMainSwitchIdx++;
+			else if(image==SUB)
+USART.c:179
+		image=MAIN;
+		}
+		else if(g_RevUart2Data[PARA1_IDX]==0x0a)
+USART.c:688
+							SetInputSource(g_SubInput,MAIN);
+							SetInputSource(inputSwap,SUB);
+						}
+USART.c:694
+						SetFreezeImage(MAIN,FREEZE);
+						break;
+					case 0x0A:
+USART.c:698
+						SetFreezeImage(MAIN,UNFREEZE);
+						break;
+					case 0x0B:
+USART.c:718
+						SetWhichImageOnTop(MAIN);
+						break;
+					case 0x10:
+						g_NextPointImage=MAIN;
+						SetWhichImageOnTop(SUB);
+						break;
+USART.c:746
+					g_ActiveImageValue=MAIN;
+				else if(byte3==2)
+					g_ActiveImageValue=SUB;
+USART.c:796
+					g_ActiveAudioWin=MAIN;
+					SetAudioPara(MAINVOL);
+					break;
+USART.c:887
+					g_ActiveImageValue=MAIN;
+				}
+				else if((byte3&0x80)==0x80)
+USART.c:913
+					g_ActiveImageValue=MAIN;
+				}
+				else if((byte3&0x80)==0x80)
+USART.c:1183
+					if(g_ActiveAudioWin==MAIN)
+						ReturnMsg_ChangeOne(4,1);
+					else if(g_ActiveAudioWin==SUB)
+USART.c:1275
+						if(GetInputSrcFormat(MAIN,&g_InSrcHSize,&g_InSrcVSize))
+							ReturnMsg_ReadWindowPara(g_InSrcHSize,g_InSrcVSize);
+						break;

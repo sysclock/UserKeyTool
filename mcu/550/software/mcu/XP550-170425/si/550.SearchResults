@@ -1,0 +1,5 @@
+---- Remote_Init 匹配 (4 in 4 文件) ----
+Code_size.c:550 Remote_Init prior is =0 cannot print ircord when push ir-panel
+Main.c:		Remote_Init();
+Remote.c:void Remote_Init(void)    			  
+Remote.h:void Remote_Init(void);    //红外传感器接收头引脚初始化

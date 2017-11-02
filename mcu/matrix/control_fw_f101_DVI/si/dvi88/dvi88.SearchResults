@@ -1,0 +1,5 @@
+---- MenuPage Æ¥Åä (4 in 2 ÎÄ¼ş) ----
+Key.c:	case MenuPage:
+Key.c:	  		OperateInfo.CurPage = MenuPage;
+Key.c:	case MenuPage: 
+Key.h:	MenuPage,

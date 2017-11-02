@@ -1,0 +1,22 @@
+---- g_ContactTel1 Matches (23 in 6 files) ----
+Keypad.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):		0x90,g_ContactTel1,g_ContactTel1,
+Keypad.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):		LCDADDR90,g_ContactTel1,g_ContactTel1,
+Main.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				Read_EEPROM_Telephone(E2ROM_Tech_Telephone_ADDR,g_ContactTel1,g_TechTeleNumVal+1);	
+Main.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				chinesedisplay(0x90, g_ContactTel1);
+StateData.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):					g_ContactTel1[nTeleIdx]=Number1[nTeleIdx];
+StateData.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				m24xx_write(E2ROM_Tech_Telephone_ADDR,g_ContactTel1,g_TechTeleNumVal+2); //此处将最后一个0也存储
+Strings.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):U8 g_ContactTel1[13]={
+Strings.h (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):_STRINGSDEC_ U8 g_ContactTel1[13];
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				g_ContactTel1[0]=byte4;
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				g_ContactTel1[1]=byte5;
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				g_ContactTel1[2]=byte6;
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				g_ContactTel1[3]=byte7;
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				g_ContactTel1[4]=byte3;
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				g_ContactTel1[5]=byte4;
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				g_ContactTel1[6]=byte5;
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				g_ContactTel1[7]=byte6;
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				g_ContactTel1[8]=byte7;
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				g_ContactTel1[9]=byte3;
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				g_ContactTel1[10]=byte4;
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				g_ContactTel1[g_TechTeleNumVal]=0;
+USART.c (d:\prj\xp520_530\mcu\stm32_control_xp550(151218)\user):				m24xx_write(E2ROM_Tech_Telephone_ADDR,g_ContactTel1,g_TechTeleNumVal+2); //此处将最后一个0也存储

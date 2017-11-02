@@ -1,0 +1,10 @@
+---- State_User_Input_MathineType Matches (9 in 4 files) ----
+Keypad.c (user):					case State_User_Input_MathineType:
+Keypad.c (user):	//State_User_Input_MathineType,
+Keypad.c (user):		{State_User_Input_MathineType,   //up
+Keypad.c (user):			State_User_Input_MathineType,  //down
+Keypad.c (user):			State_User_Input_MathineType,   //ok
+MenuTbl.c (user):			case State_User_Input_MathineType:
+StateData.c (user):		case State_User_Input_MathineType:
+StateData.c (user):				DealCurrentState(State_User_Input_MathineType);
+StateData.h (user):	State_User_Input_MathineType,

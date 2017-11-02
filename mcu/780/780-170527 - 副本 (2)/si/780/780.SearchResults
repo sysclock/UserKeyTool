@@ -1,0 +1,12 @@
+---- NumKeyToInt Æ¥Åä (11 in 1 ÎÄ¼þ) ----
+StateData.c:static BOOL NumKeyToInt(U8 *cnt)    //key to number
+StateData.c:	if(!NumKeyToInt(&cnt))
+StateData.c:	if(!NumKeyToInt(&cnt))
+StateData.c:	if(!NumKeyToInt(&cnt))
+StateData.c:	if(!NumKeyToInt(&cnt))
+StateData.c:	if(!NumKeyToInt(&cnt))
+StateData.c:	if(!NumKeyToInt(&cnt))
+StateData.c:	if(!NumKeyToInt(&cnt))
+StateData.c:	if(!NumKeyToInt(&cnt))
+StateData.c:	if(!NumKeyToInt(&cnt))
+StateData.c:	NumKeyToInt(&cnt);	

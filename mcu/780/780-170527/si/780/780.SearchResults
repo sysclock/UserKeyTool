@@ -1,0 +1,97 @@
+---- gScrTotPix 匹配 (102 in 4 文件) ----
+Display.c:			if(col_flag==0&&begin_x<gScrTotPix[0][i] )
+Display.c:			if(col_end_flag==0 && end_x<=gScrTotPix[0][i])
+Display.c:			if(line_flag==0&&begin_y<gScrTotPix[1][i] )
+Display.c:			if(line_end_flag==0 && end_y<=gScrTotPix[1][i])
+Display.c:			if(end_x<=gScrTotPix[0][j])
+Display.c:					OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][4]=end_x-gScrTotPix[0][j-1]+OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][2];
+Display.c:				OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][4]=gScrTotPix[0][j]-gImgPara[num][BEGIN_X_INDEX]+OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][2];
+Display.c:					OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][6]=begin_x-gScrTotPix[0][j-1];
+Display.c:				if(end_y<=gScrTotPix[1][j])
+Display.c:						OF_AW_Para[j*gScrCol+col][OF_AW_cnt[j*gScrCol+col]][5]=end_y-gScrTotPix[1][j-1]+OF_AW_Para[j*gScrCol+col][OF_AW_cnt[j*gScrCol+col]][3];
+Display.c:						OF_AW_Para[j*gScrCol+col][OF_AW_cnt[j*gScrCol+col]][5]=gScrTotPix[1][j]-gImgPara[num][BEGIN_Y_INDEX]+OF_AW_Para[j*gScrCol+col][OF_AW_cnt[j*gScrCol+col]][3];
+Display.c:					OF_AW_Para[j*gScrCol+col][OF_AW_cnt[j*gScrCol+col]][7]=begin_y-gScrTotPix[1][j-1];
+Display.c:			if(col_flag==0&&gImgPara[num][BEGIN_X_INDEX]<gScrTotPix[0][i] )
+Display.c:			if(col_end_flag==0 && gImgPara[num][END_X_INDEX]<=gScrTotPix[0][i])
+Display.c:			if(line_flag==0&&gImgPara[num][BEGIN_Y_INDEX]<gScrTotPix[1][i] )
+Display.c:			if(line_end_flag==0 && gImgPara[num][END_Y_INDEX]<=gScrTotPix[1][i])
+Display.c:			if(gImgPara[num][END_X_INDEX]<=gScrTotPix[0][j])
+Display.c:					OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][4]=gImgPara[num][END_X_INDEX]-gScrTotPix[0][j-1]+OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][2];
+Display.c:					OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][4]=gScrTotPix[0][j]-gImgPara[num][BEGIN_X_INDEX]+OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][2];
+Display.c:					OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][4]=gScrTotPix[0][j]+OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][2];	
+Display.c:					OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][6]=gImgPara[num][BEGIN_X_INDEX]-gScrTotPix[0][j-1];
+Display.c:				if(gImgPara[num][END_Y_INDEX]<=gScrTotPix[1][j])
+Display.c:						OF_AW_Para[j*gScrCol+col][OF_AW_cnt[j*gScrCol+col]][5]=gImgPara[num][END_Y_INDEX]-gScrTotPix[1][j-1]+OF_AW_Para[j*gScrCol+col][OF_AW_cnt[j*gScrCol+col]][3];
+Display.c:							OF_AW_Para[j*gScrCol+col][OF_AW_cnt[j*gScrCol+col]][5]=gScrTotPix[1][j]-gImgPara[num][BEGIN_Y_INDEX]+OF_AW_Para[j*gScrCol+col][OF_AW_cnt[j*gScrCol+col]][3];				
+Display.c:						OF_AW_Para[j*gScrCol+col][OF_AW_cnt[j*gScrCol+col]][5]=gScrTotPix[1][j]+OF_AW_Para[j*gScrCol+col][OF_AW_cnt[j*gScrCol+col]][3];
+Display.c:					OF_AW_Para[j*gScrCol+col][OF_AW_cnt[j*gScrCol+col]][7]=gImgPara[num][BEGIN_Y_INDEX]-gScrTotPix[1][j-1];
+Display.c:			if(col_flag==0&&gImgPara[num][BEGIN_X_INDEX]<gScrTotPix[0][i] )
+Display.c:			if(col_end_flag==0 && gImgPara[num][END_X_INDEX]<=gScrTotPix[0][i])
+Display.c:			if(line_flag==0&&gImgPara[num][BEGIN_Y_INDEX]<gScrTotPix[1][i] )
+Display.c:			if(line_end_flag==0 && gImgPara[num][END_Y_INDEX]<=gScrTotPix[1][i])
+Display.c:			if(col_flag==0&&gImgPara[num][BEGIN_X_INDEX]<gScrTotPix[0][i] )
+Display.c:			if(col_end_flag==0 && gImgPara[num][END_X_INDEX]<=gScrTotPix[0][i])
+Display.c:			if(line_flag==0&&gImgPara[num][BEGIN_Y_INDEX]<gScrTotPix[1][i] )
+Display.c:			if(line_end_flag==0 && gImgPara[num][END_Y_INDEX]<=gScrTotPix[1][i])
+Display.c:				if(gImgPara[num][END_Y_INDEX]<=gScrTotPix[1][line])
+Display.c:					OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][5]=gScrTotPix[1][line]-gImgPara[num][BEGIN_Y_INDEX];
+Display.c:					OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][7]=gImgPara[num][BEGIN_Y_INDEX]-gScrTotPix[1][line-1];
+Display.c:				if(gImgPara[num][END_Y_INDEX]<=gScrTotPix[1][i])
+Display.c:					OF_AW_Para[i*gScrCol+j][OF_AW_cnt[i*gScrCol+j]][5]=gImgPara[num][END_Y_INDEX]-gScrTotPix[1][i-1];
+Display.c:					OF_AW_Para[i*gScrCol+j][OF_AW_cnt[j*gScrCol+j]][5]=gScrTotPix[1][i]-gScrTotPix[1][i-1];
+Display.c:				if(gImgPara[num][END_X_INDEX]<=gScrTotPix[0][j])
+Display.c:					OF_AW_Para[i*gScrCol+j][OF_AW_cnt[i*gScrCol+j]][4]=gScrTotPix[0][col]-gImgPara[num][BEGIN_X_INDEX];	
+Display.c:					OF_AW_Para[i*gScrCol+j][OF_AW_cnt[i*gScrCol+j]][6]=gImgPara[num][BEGIN_X_INDEX]-gScrTotPix[0][j-1];
+Display.c:					if(gImgPara[num][END_X_INDEX]<=gScrTotPix[0][j])
+Display.c:						OF_AW_Para[i*gScrCol+j][OF_AW_cnt[j*gScrCol+j]][4]=gImgPara[num][END_X_INDEX]-gScrTotPix[0][j-1];	
+Display.c:						OF_AW_Para[i*gScrCol+j][OF_AW_cnt[j*gScrCol+j]][4]=gScrTotPix[0][j]-gScrTotPix[0][j-1];
+Display.c:			if(col_flag==0&&gImgPara[num][BEGIN_X_INDEX]<gScrTotPix[0][i] )
+Display.c:			if(col_end_flag==0 && gImgPara[num][END_X_INDEX]<=gScrTotPix[0][i])
+Display.c:			if(line_flag==0&&gImgPara[num][BEGIN_Y_INDEX]<gScrTotPix[1][i] )
+Display.c:			if(line_end_flag==0 && gImgPara[num][END_Y_INDEX]<=gScrTotPix[1][i])
+Display.c:					if(gImgPara[num][END_Y_INDEX]<=gScrTotPix[1][line])
+Display.c:						OF_Scaler_Para[outBScalerdNo][10]=gScrTotPix[1][line]-gImgPara[num][BEGIN_Y_INDEX];
+Display.c:						OF_AW_Para[line*gScrCol+j][OF_AW_cnt[line*gScrCol+j]][7]=gImgPara[num][BEGIN_Y_INDEX]-gScrTotPix[1][line-1];
+Display.c:					if(gImgPara[num][END_Y_INDEX]<=gScrTotPix[1][i])
+Display.c:						OF_Scaler_Para[outBScalerdNo][10]=gImgPara[num][END_Y_INDEX]-gScrTotPix[1][i-1];
+Display.c:				if(gImgPara[num][END_X_INDEX]<=gScrTotPix[0][j])
+Display.c:					OF_Scaler_Para[outBScalerdNo][9]=gScrTotPix[0][col]-gImgPara[num][BEGIN_X_INDEX];	
+Display.c:					OF_Scaler_Para[outBScalerdNo][6]=(gScrTotPix[0][col]-gImgPara[num][BEGIN_X_INDEX])*InSrcRes[gImgPara[num][SOURCE_IN_INDEX]].w/gImgPara[num][WIDTH_INDEX]-1; //此次假设输入为1920点宽 还得改成实际输出的值
+Display.c:					OF_AW_Para[i*gScrCol+j][OF_AW_cnt[i*gScrCol+j]][6]=gImgPara[num][BEGIN_X_INDEX]-gScrTotPix[0][col-1];
+Display.c:					if(gImgPara[num][END_X_INDEX]<=gScrTotPix[0][j])
+Display.c:						OF_Scaler_Para[outBScalerdNo][9]=gImgPara[num][END_X_INDEX]-gScrTotPix[0][j-1];
+Display.c:			if(col_flag==0&&gImgPara[num][BEGIN_X_INDEX]<gScrTotPix[0][i] )
+Display.c:			if(col_end_flag==0 && gImgPara[num][END_X_INDEX]<=gScrTotPix[0][i])
+Display.c:			if(line_flag==0&&gImgPara[num][BEGIN_Y_INDEX]<gScrTotPix[1][i] )
+Display.c:			if(line_end_flag==0 && gImgPara[num][END_Y_INDEX]<=gScrTotPix[1][i])
+Display.c:				if(gImgPara[num][END_Y_INDEX]<=gScrTotPix[1][line])
+Display.c:					IF_Scaler_Para[inBScalerdNo][10]=gScrTotPix[1][line]-gImgPara[num][BEGIN_Y_INDEX];
+Display.c:					IF_Scaler_Para[inBScalerdNo][8]=IF_Scaler_Para[inBScalerdNo][7]+(gScrTotPix[1][line]-gImgPara[num][BEGIN_Y_INDEX])*InSrcRes[num].h/gImgPara[num][HIGH_INDEX]-1; //此次假设输入为1080高 还得改成实际输出的值
+Display.c:				curimage_begin_y=gScrTotPix[1][i-1];
+Display.c:				if(gImgPara[num][END_Y_INDEX]<=gScrTotPix[1][i])
+Display.c:					IF_Scaler_Para[inBScalerdNo][10]=gImgPara[num][END_Y_INDEX]-gScrTotPix[1][i-1];
+Display.c:				if(gImgPara[num][END_X_INDEX]<=gScrTotPix[0][j])
+Display.c:					IF_Scaler_Para[inBScalerdNo][9]=gScrTotPix[0][col]-gImgPara[num][BEGIN_X_INDEX];
+Display.c:					IF_Scaler_Para[inBScalerdNo][6]=(gScrTotPix[0][col]-gImgPara[num][BEGIN_X_INDEX])*InSrcRes[num].w/gImgPara[num][WIDTH_INDEX]-1; //此次假设输入为1920点宽 还得改成实际输出的值						
+Display.c:					curimage_begin_x=gScrTotPix[0][j-1];
+Display.c:					if(gImgPara[num][END_X_INDEX]<=gScrTotPix[0][j])
+Display.c:						IF_Scaler_Para[inBScalerdNo][9]=gImgPara[num][END_X_INDEX]-gScrTotPix[0][j-1];
+displayProc.c:u16 gScrTotPix[2][MAX_OUT_PORTS];
+displayProc.c:			gScrTotPix[0][0]=g_screen_line_column_pixel[0][0];
+displayProc.c:			gScrTotPix[0][i]=gScrTotPix[0][i-1]+g_screen_line_column_pixel[0][i];		
+displayProc.c:	gScrTotX=gScrTotPix[0][i-1];
+displayProc.c:			gScrTotPix[1][0]=g_screen_line_column_pixel[1][0];
+displayProc.c:			gScrTotPix[1][i]=gScrTotPix[1][i-1]+g_screen_line_column_pixel[1][i];
+displayProc.c:	gScrTotY=gScrTotPix[1][i-1];
+displayProc.c:	gInImgPara[2]=gScrTotPix[0][gScrCol-1];
+displayProc.c:	gInImgPara[3]=gScrTotPix[1][gScrRow-1];
+displayProc.h:extern u16 gScrTotPix[2][8];
+Screen-set.c:u16 gScrTotPix[2][MAX_OUT_PORTS];
+Screen-set.c:			gScrTotPix[0][0]=g_screen_line_column_pixel[0][0];
+Screen-set.c:			gScrTotPix[0][i]=gScrTotPix[0][i-1]+g_screen_line_column_pixel[0][i];		
+Screen-set.c:	gScrTotX=gScrTotPix[0][i-1];
+Screen-set.c:			gScrTotPix[1][0]=g_screen_line_column_pixel[1][0];
+Screen-set.c:			gScrTotPix[1][i]=gScrTotPix[1][i-1]+g_screen_line_column_pixel[1][i];
+Screen-set.c:	gScrTotY=gScrTotPix[1][i-1];
+Screen-set.c:	gInImgPara[2]=gScrTotPix[0][gScrCol-1];
+Screen-set.c:	gInImgPara[3]=gScrTotPix[1][gScrRow-1];

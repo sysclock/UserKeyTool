@@ -1,0 +1,16 @@
+---- g_UserSetPasswordVal Æ¥Åä (16 in 4 ÎÄ¼þ) ----
+I2C.c:	cch[0]=g_UserSetPasswordVal&0xFF;
+I2C.c:	cch[1]=g_UserSetPasswordVal>>8;
+I2C.c:	cch[2]=g_UserSetPasswordVal>>16;
+I2C.c:	cch[3]=g_UserSetPasswordVal>>24;
+I2C.c:		g_UserSetPasswordVal=cch[3]<<24|cch[2]<<16|cch[1]<<8|cch[0];
+Keypad.c:	g_UserSetPasswordVal=1000000;
+Keypad.h:_KEYPADDEC_ U32 g_UserSetPasswordVal;
+StateData.c:		g_UserSetPasswordVal=1000000;
+StateData.c:	else if((g_UserSetPasswordVal!=1000000&&value==g_UserSetPasswordVal))
+StateData.c:		g_UserSetPasswordVal=1000000;
+StateData.c:				if(g_UserSetPasswordVal==atoi(Number1,Number1Idx))
+StateData.c:				g_UserSetPasswordVal=atoi(Number1,Number1Idx);
+StateData.c:				if(g_UserSetPasswordVal<1000000)
+StateData.c:				if(g_UserSetPasswordVal<1000000)
+StateData.c:				if(g_UserSetPasswordVal<1000000)

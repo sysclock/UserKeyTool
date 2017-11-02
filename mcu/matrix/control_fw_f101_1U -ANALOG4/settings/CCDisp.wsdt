@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Workspace>
+  <ConfigDictionary>
+    
+  <CurrentConfigs><Project>CCDisp/Debug</Project></CurrentConfigs></ConfigDictionary>
+  <Desktop>
+    <Static>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>143</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+    <Build><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>664</ColumnWidth1><ColumnWidth2>307</ColumnWidth2><ColumnWidth3>61</ColumnWidth3></Build><Debug-Log><ColumnWidth0>19</ColumnWidth0><ColumnWidth1>1222</ColumnWidth1></Debug-Log><TerminalIO/><Find-in-Files><ColumnWidth0>440</ColumnWidth0><ColumnWidth1>62</ColumnWidth1><ColumnWidth2>754</ColumnWidth2></Find-in-Files></Static>
+    <Windows>
+      
+    <Wnd0>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-12389-1602</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>CCDisp</ExpandedNode><ExpandedNode>CCDisp/CMSIS</ExpandedNode><ExpandedNode>CCDisp/User</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd0><Wnd1><Tabs><Tab><Identity>TabID-93-3470</Identity><TabName>Build</TabName><Factory>Build</Factory><Session/></Tab><Tab><Identity>TabID-26865-16423</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab><Tab><Identity>TabID-30822-14754</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd1></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>F:\Xunlei\CCD_OSD\&#x8F6F;&#x4eF6;&#x8BBe;&#x8BA1;\StepCtrl.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>487</SelStart><SelEnd>500</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>F:\Xunlei\CCD_OSD\&#x8F6F;&#x4eF6;&#x8BBe;&#x8BA1;\Menu.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>94</SelStart><SelEnd>94</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>F:\Xunlei\CCD_OSD\&#x8F6F;&#x4eF6;&#x8BBe;&#x8BA1;\Menu.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>69</SelStart><SelEnd>69</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>F:\Xunlei\CCD_OSD\&#x8F6F;&#x4eF6;&#x8BBe;&#x8BA1;\StepCtrl.h</Filename><XPos>0</XPos><YPos>28</YPos><SelStart>787</SelStart><SelEnd>787</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>F:\Xunlei\CCD_OSD\&#x8F6F;&#x4eF6;&#x8BBe;&#x8BA1;\main.c</Filename><XPos>0</XPos><YPos>33</YPos><SelStart>1622</SelStart><SelEnd>1622</SelEnd></Tab><ActiveTab>4</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>F:\Xunlei\CCD_OSD\&#x8F6F;&#x4eF6;&#x8BBe;&#x8BA1;\Fun.c</Filename><XPos>0</XPos><YPos>348</YPos><SelStart>8805</SelStart><SelEnd>8805</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>F:\Xunlei\CCD_OSD\&#x8F6F;&#x4eF6;&#x8BBe;&#x8BA1;\Init.h</Filename><XPos>0</XPos><YPos>79</YPos><SelStart>2414</SelStart><SelEnd>2414</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>F:\Xunlei\CCD_OSD\&#x8F6F;&#x4eF6;&#x8BBe;&#x8BA1;\Init.c</Filename><XPos>0</XPos><YPos>276</YPos><SelStart>7745</SelStart><SelEnd>7745</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>F:\Xunlei\CCD_OSD\&#x8F6F;&#x4eF6;&#x8BBe;&#x8BA1;\stm32f10x_it.c</Filename><XPos>0</XPos><YPos>129</YPos><SelStart>5517</SelStart><SelEnd>5517</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>F:\Xunlei\CCD_OSD\&#x8F6F;&#x4eF6;&#x8BBe;&#x8BA1;\AT24XX.c</Filename><XPos>0</XPos><YPos>131</YPos><SelStart>1682</SelStart><SelEnd>1682</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-00d3a880><key>iaridepm.enu1</key></Toolbar-00d3a880></Sizes></Row0><Row1><Sizes/></Row1></Top><Left><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>454</Bottom><Right>217</Right><x>-2</x><y>-2</y><xscreen>144</xscreen><yscreen>198</yscreen><sizeHorzCX>112500</sizeHorzCX><sizeHorzCY>275000</sizeHorzCY><sizeVertCX>171094</sizeVertCX><sizeVertCY>633333</sizeVertCY></Rect></Wnd0></Sizes></Row0></Left><Right><Row0><Sizes/></Row0></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>221</Bottom><Right>1282</Right><x>-2</x><y>-2</y><xscreen>1284</xscreen><yscreen>223</yscreen><sizeHorzCX>1003125</sizeHorzCX><sizeHorzCY>309722</sizeHorzCY><sizeVertCX>112500</sizeVertCX><sizeVertCY>275000</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Workspace>
+
+

@@ -1,0 +1,9 @@
+命令22 调取预存的显示效果
+INPUT_FPGA LOAD_DISPLAY_MODE [ModeIndex]
+ModeIndex:效果序列号 0~10
+返回
+INPUT_FPGA LOAD_DISPLAY_MODE [ModeIndex]
+撖龙  14:22:15
+每个命令都要加一个\r\n
+
+49 4E 50 55 54 5F 46 50 47 41 20 4C 4F 41 44 5F 44 49 53 50 4C 41 59 5F 4D 4F 44 45 20 32 0D 0A 
